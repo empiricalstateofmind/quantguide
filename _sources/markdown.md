@@ -4,6 +4,13 @@ Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
 in regular markdown files (`.md`), you'll write in the same flavor of markdown
 called **MyST Markdown**.
 
+```{admonition} Click to reveal the answer.
+:class: dropdown
+
+Some hidden toggle content!
+$$ x = 2y $$
+```
+
 ## What is MyST?
 
 MyST stands for "Markedly Structured Text". It

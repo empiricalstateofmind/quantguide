@@ -1,5 +1,9 @@
+file: content
+sections:
 - file: intro
-- file: content
+- file: markdown
+- file: notebooks
+- file: 01_introduction\content
   sections:
-    - file: markdown
-    - file: notebooks
+  - file: 01_introduction\second
+  - file: 01_introduction\third

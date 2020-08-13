@@ -1,0 +1,8 @@
+# Book settings
+title: Quantitative Interview Guide
+author: Andrew Mellor
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex

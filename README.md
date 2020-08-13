@@ -5,7 +5,7 @@ Knowledge is phrased in a question and answer style which makes this useful for 
 
 ## Accessing the Guide
 
-The guide is available online [here]().
+The guide is available online [here](https://andrewmellor.co.uk/quantguide).
 
 ## Building
 

@@ -6,3 +6,26 @@ logo: logo.png
 latex:
   latex_documents:
     targetname: book.tex
+
+#######################################################################################
+# Launch button settings
+repository:
+  url                       : https://github.com/empiricalstateofmind/quantguide  # The URL to your book's repository
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : master
+   
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon                   : ""  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  google_analytics_id       : "UA-49010624-4"  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://andrewmellor.co.uk/quantguide"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  comments:
+    hypothesis              : false
+    utterances              : false

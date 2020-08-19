@@ -1,0 +1,19 @@
+<entry>
+<title>Counting To Twenty</title>
+<slug>count_to_twenty</slug>
+<category>Mathematics</category>
+<subcategory>Games</subcategory>
+<difficulty>Easy</difficulty>
+<date>19/08/2020</date>
+<interview>Large Systematic Fund (1st Interview)</interview>
+<link name="ABC">www.abc.com</link>
+<question>
+We play a game where we sequentially say a number between zero and five and add that to the total. 
+The first player to say a number $20$ or greater loses the game.
+Would you rather go first or second, and what would your strategy be?
+</question>
+<answer>
+TBC
+</answer>
+<include>True</include>
+</entry>

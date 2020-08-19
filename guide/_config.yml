@@ -1,7 +1,7 @@
 # Book settings
 title: Quantitative Guide
 author: Andrew Mellor
-logo: logo.png
+logo: image.png
 
 latex:
   latex_documents:

@@ -9,11 +9,10 @@ The guide is available online [here](https://andrewmellor.co.uk/quantguide).
 
 ## Building
 
-Building the project requires three steps:
+Building the project requires two steps:
 
-1. Constructing the markdown files.
-2. Creating the table of contents with ```jupyter-book toc guide```.
-3. Building the guide using ```jupyter-book build guide```.
+1. Constructing the markdown files using ```python generate_guide.py```.
+2. Building the guide using ```jupyter-book build guide```.
 
 ## Contributing
 

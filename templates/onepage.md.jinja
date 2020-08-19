@@ -1,0 +1,33 @@
+# {{title}}
+
+```{margin} Metadata
+**Tags**: {% for tag in tags %} {{ tag }}{% if not loop.last %},{% endif %} {% endfor %}
+
+**Date Added**: {{ date }}
+
+**Difficulty**: {{ difficulty }}
+```
+
+{{ question }}
+````{toggle} Click to reveal answer
+**Answer**
+
+{{ answer }}
+````
+
+{% if interviews is defined and interviews|length %}
+**Interviews**
+
+This question has been asked at the following companies:
+{% for interview in interviews %} 
+- {{ interview }}
+{% endfor %}
+{% endif %}
+
+{% if links is defined and links|length %}
+**Links and Further Reading**
+{% for link in links %} 
+- {{ link }} {% if not loop.last %}<br>{% endif %} 
+{% endfor %}
+{% endif %}
+

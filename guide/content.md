@@ -1,4 +1,0 @@
-QuantGuide
-=======================
-
-Placeholder text

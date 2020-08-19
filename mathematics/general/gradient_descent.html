@@ -5,27 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>QuantGuide &#8212; Quantitative Guide</title>
+    <title>1. Gradient Descent &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
@@ -36,23 +36,22 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/content.html" />
-    <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/general/gradient_descent.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="General" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/content.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/general/gradient_descent.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="QuantGuide" />
-<meta property="og:description" content="QuantGuide  Placeholder text  " />
+<meta property="og:title"       content="Gradient Descent" />
+<meta property="og:description" content="Gradient Descent  Metadata  Tags:  Date Added: 19/08/2020  Difficulty: Easy  What is the advantage of a convex loss function when using gradient descent? Prove " />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/image.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -68,9 +67,9 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../../index.html">
   
-  <img src="_static/image.png" class="logo" alt="logo">
+  <img src="../../_static/image.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Quantitative Guide</h1>
@@ -78,7 +77,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
@@ -86,39 +85,8 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../../intro.html">
    Welcome to your Jupyter Book
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Default Files
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   QuantGuide
-  </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="markdown.html">
-     Markdown Files
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Files in Folders
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
   </a>
  </li>
 </ul>
@@ -127,16 +95,23 @@
   Mathematics
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/mathematics_questions.html">
-   Questions
+  <a class="reference internal" href="../games/index.html">
+   Games
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/mathematics_answers.html">
-   Answers
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
+   General
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Gradient Descent
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -180,7 +155,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/content.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/mathematics/general/gradient_descent.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -200,7 +175,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fcontent.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/general/gradient_descent.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -232,11 +207,37 @@
         
               <div>
                 
-  <div class="section" id="quantguide">
-<h1>QuantGuide<a class="headerlink" href="#quantguide" title="Permalink to this headline">¶</a></h1>
-<p>Placeholder text</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="gradient-descent">
+<h1><span class="section-number">1. </span>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permalink to this headline">¶</a></h1>
+<div class="margin sidebar">
+<p class="sidebar-title">Metadata</p>
+<p><strong>Tags</strong>:</p>
+<p><strong>Date Added</strong>: 19/08/2020</p>
+<p><strong>Difficulty</strong>: Easy</p>
 </div>
+<p>What is the advantage of a convex loss function when using gradient descent?
+Prove that a convex function has at most one minimum.</p>
+<div class="toggle docutils container">
+<p><strong>Answer</strong></p>
+<p>A convex loss function ensures that a gradient descent algorithm will terminate at the global minimum.</p>
+<p>A function <span class="math notranslate nohighlight">\(f(x)\)</span> is convex if
+\begin{align*}
+\frac{1}{2}\left[f(a)+f(b)\right] &gt; f\left(\frac{1}{2}(a+b)\right).
+\end{align*}
+This is perhaps easiest to remember in words, or even easier still, a diagram.
+If we draw a line between any two points on the curve <span class="math notranslate nohighlight">\(f\)</span>, then that line will <em>always</em> lie above the curve <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>The proof of only one minimum is usually done by assuming that two minima exist, and showing that convexity must fail.
+This is again quite simple to show in a “proof by diagram.””</p>
+</div>
+<p><strong>Interviews</strong></p>
+<p>This question has been asked at the following companies:</p>
+<ul class="simple">
+<li><p>NatWest eFX Desk (1st Interview)</p></li>
+</ul>
+<p><strong>Links and Further Reading</strong></p>
+<ul class="simple">
+<li><p>ABC</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -252,7 +253,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./mathematics/general"
         },
         predefinedOutput: true
     }
@@ -267,8 +268,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to your Jupyter Book</a>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">Markdown Files</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">General</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -287,7 +287,7 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../../_static/js/index.js"></script>
     
     <!-- Google Analytics -->
     <script>

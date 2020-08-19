@@ -1,0 +1,54 @@
+# The Mystery Box
+
+```{margin} Metadata
+**Tags**: 
+
+**Date Added**: 19/08/2020
+
+**Difficulty**: Easy
+```
+
+
+A mystery box has an unspecified amount of money in it, however we know that it is distributed uniformly between £0 and £1,000,000.
+The amount in the box is known to the owner however.
+The owner invites you to play a game where you bid $B \in [0,1,000,000]$ for the box. 
+If $B \ge \frac{2}{3}T$ where $T$ is the amount in the box, you win the box, otherwise the bid is not accepted and nothing happens. 
+What is the optimum amount to bid for the box?
+
+````{toggle} Click to reveal answer
+**Answer**
+
+
+To make this question easier, it is useful to rescale everything to between zero and one, so that we know $T \sim \text{Unif}(0,1)$.
+We want to work out the expected return from a guess $B$.
+From the problem we have two things that happen, our bid is rejected and we win nothing, or our bid is accepted.
+ 
+Without any prior information on the box we can easily calculate the expectation $E(T)=0.5$.
+If our bid is accepted, we now know something else about the box, namely that $T<\frac{3}{2}B$.
+In this case we now now that $(T|\text{Accepted}) \sim \text{Unif}(0,\frac{3}{2}B)$, which has expectation $\frac{3}{4}B$.
+In this case our expected payoff is $P = \frac{3}{4}B - B = -\frac{1}{4}B$.
+Clearly this is negative for any choice of $B$, and so our optimal choice is $B=0$.
+Since we have a choice between a negative payoff and zero, we do not need to factor in the probabilities of acceptance.
+
+Note, this question is sometimes equally phrased as "acceptance if $B$ is greater than $T$, however the payoff is $1.5T$."
+You can repeat the exercise above to see they are equivalent.
+
+````
+
+
+**Interviews**
+
+This question has been asked at the following companies:
+ 
+- Natwest 1
+ 
+- JPM 1
+
+
+
+
+**Links and Further Reading**
+ 
+- ABC  
+
+

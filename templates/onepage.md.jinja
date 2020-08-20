@@ -11,7 +11,7 @@
 {{ question }}
 ````{toggle} Click to reveal answer
 **Answer**
-{% if links is defined and links|length %}
+{% if answer is not none %}
 {{ answer }}
 {% else %}
 No answer currently provided. Please feel free to [contribute an answer](https://github.com/empiricalstateofmind/quantguide/tree/master/source).

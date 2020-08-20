@@ -63,6 +63,7 @@ def build_toc(entry_store:dict):
                  'chapters':[
                      {'file': 'about'},
                      {'file': 'interview_tips'},
+                     {'file': 'resources'},
                      {'file': 'contribute'},
                  ]}]
     for cat, d in entry_store.items():

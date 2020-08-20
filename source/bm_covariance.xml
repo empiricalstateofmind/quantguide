@@ -1,0 +1,28 @@
+<entry>
+<title>Covariance of Two Brownian Motions</title>
+<slug>bm_covariance</slug>
+<category>Mathematics</category>
+<subcategory>Probability</subcategory>
+<difficulty>Easy</difficulty>
+<date>20/08/2020</date>
+<interview>Natwest eFX Desk (Telephone Interview)</interview>
+<question>
+Consider two Brownian motions $B_t$ and $B_s$.
+Show that $Cov(B_t,B_s) = \min(t,s)$.
+</question>
+<answer>
+To answer this question we need to know a few facts about Brownian motion (BM).
+The definition is $B_t \sim N(0,t)$.
+The second fact is that two non-overlapping BMs are independent, i.e $B_t$ and $B_s - B_t$ are independent for $s>t$.
+
+Without loss of generality, suppose $s<t$.
+Then,
+\begin{align*}
+    Cov(B_t, B_s) &= E[B_t B_s] \\
+    &= E[((B_t-B_s)+B_s)B_s] \\
+    &= E[B_s^2] + E[(B_t-B_s)B_s] \\
+    &= s 
+\end{align*}
+</answer>
+<include>True</include>
+</entry>

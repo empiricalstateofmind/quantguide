@@ -16,8 +16,7 @@ Would you rather go first or second, and what would your strategy be?
 ````{toggle} Click to reveal answer
 **Answer**
 
-
-TBC
+No answer currently provided. Please feel free to [contribute an answer](https://github.com/empiricalstateofmind/quantguide/tree/master/source).
 
 ````
 
@@ -26,13 +25,8 @@ TBC
 
 This question has been asked at the following companies:
  
-- Large Systematic Fund (1st Interview)
+- Large Systematic Fund (Telephone Interview)
 
 
-
-
-**Links and Further Reading**
- 
-- ABC  
 
 

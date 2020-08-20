@@ -33,6 +33,7 @@ Since we have a choice between a negative payoff and zero, we do not need to fac
 Note, this question is sometimes equally phrased as "acceptance if $B$ is greater than $T$, however the payoff is $1.5T$."
 You can repeat the exercise above to see they are equivalent.
 
+
 ````
 
 
@@ -40,15 +41,13 @@ You can repeat the exercise above to see they are equivalent.
 
 This question has been asked at the following companies:
  
-- Natwest 1
- 
-- JPM 1
+- Squarepoint Capital (Telephone Interview)
 
 
 
 
 **Links and Further Reading**
  
-- ABC  
+- [General principle - the 'Market for Lemons'](https://en.wikipedia.org/wiki/The_Market_for_Lemons)  
 
 

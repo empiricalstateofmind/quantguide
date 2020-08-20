@@ -26,7 +26,8 @@ This is perhaps easiest to remember in words, or even easier still, a diagram.
 If we draw a line between any two points on the curve $f$, then that line will *always* lie above the curve $f$.
 
 The proof of only one minimum is usually done by assuming that two minima exist, and showing that convexity must fail.
-This is again quite simple to show in a "proof by diagram.""
+This is again quite simple to show in a "proof by diagram."
+
 
 ````
 
@@ -42,6 +43,6 @@ This question has been asked at the following companies:
 
 **Links and Further Reading**
  
-- ABC  
+- [math.stackexchange discussion](https://math.stackexchange.com/questions/1280213/prove-local-minimum-of-a-convex-function-is-a-global-minumum-using-only-convexi)  
 
 

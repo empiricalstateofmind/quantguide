@@ -1,2 +1,4 @@
 */_build/*
 *.pyc
+guide/*/*/*.md
+guide/_toc.yml

@@ -1,0 +1,34 @@
+<entry>
+<title>Type I and II Errors</title>
+<slug>error_types</slug>
+<category>Data Science</category>
+<subcategory>Model Validation</subcategory>
+<difficulty>Easy </difficulty>
+<date>20/08/2020</date>
+<link name="Wikipedia">https://en.wikipedia.org/wiki/Type_I_and_type_II_errors</link>
+<question>
+What is the difference between a Type I and Type II error?
+What is a confusion matrix?
+</question>
+<answer>
+There are two types of error when testing a hypothesis $H_0$:
+- Type I: Rejecting $H_0$ when $H_0$ is true
+- Type II: Not rejecting $H_0$ when $H_0$ is false.
+These are also known as false positive and false negative respectively, although these are more often used in predictive tasks.
+
+The Type I error probability $\alpha$, also called the \emph{size} of a test, is given by
+\begin{align*}
+    \alpha = \Pr(\text{Reject } H_0 | H_0 \text{ True}).
+\end{align*}
+The Type II error probability $\beta$, also called the \emph{power} of the test, is given by
+\begin{align*}
+    \beta = \Pr(\text{Don't Reject } H_0 | H_1 \text{ True}).
+\end{align*}
+These can also be defined in terms of the critical region (although not done here), the set $C$ such that if $\vec{x} \in C$ then we reject $H_0$.
+
+A confusion matrix is a more general version of the Type I and Type II errors, where there are multiple possible hypotheses or classifications.
+For example, if we have $k$ different potential classifications, then the (asymmetric) confusion matrix entry $C_{ij}$ gives the number or fraction of data points which are of class $i$ but incorrectly classified as class $j$.
+When $k=2$ there are two off-diagonal terms - these are the Type I and Type II errors.
+</answer>
+<include>True</include>
+</entry>

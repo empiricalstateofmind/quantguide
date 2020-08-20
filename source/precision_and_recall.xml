@@ -1,0 +1,24 @@
+<entry>
+<title>Precision and Recall</title>
+<slug>precision_and_recall</slug>
+<category>Data Science</category>
+<subcategory>Model Validation</subcategory>
+<difficulty>Easy</difficulty>
+<date>20/08/2020</date>
+<question>
+Explain what precision and recall are.
+How do they relate to the ROC curve?
+</question>
+<answer>
+There are a number of statistics to examine when assessing model performance:
+- **Accuracy** The number of correct classifications.
+- **Precision** The number of true positives over all predicted positives.
+- **Recall (Sensitivity)** The number of true positives over all actual positives
+- **F1-Score** The weighted average of Precision and Recall, \begin{align} \rm  2 \cdot (Recall \cdot Precision) / (Recall + Precision). \end{align}   
+
+The ROC curve is a plot of the false positive rate against the true positive rate.
+Ideally we want a low false positive rate and high true positive rate.
+If we have a model that we can vary continuously we can see how these rates change.
+</answer>
+<include>True</include>
+</entry>

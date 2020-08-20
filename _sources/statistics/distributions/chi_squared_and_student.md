@@ -1,0 +1,55 @@
+# Chi-Squared and Student's t Distributions
+
+```{margin} Metadata
+**Tags**: 
+
+**Date Added**: 20/08/2020
+
+**Difficulty**: Medium
+```
+
+
+What are the $\chi^2$ and Student's $t$ distribution?
+How are they related to the normal distribution, and why are they useful?
+
+````{toggle} Click to reveal answer
+**Answer**
+
+
+Let $Z_1, \dots, Z_r \sim N(0,1)$, then $Y = Z_1^2 + \dots Z_r^2$ has the $\chi$-squared distribution with $r$ degrees of freedom.
+This shares a probability density distribution with $Gamma(\frac{r}{2}, \frac{1}{2})$.
+
+Let $Z \sim N(0,1)$ and $Y \sim \chi^2_r$ be independent then
+\begin{align*}
+    T = \frac{Z}{\sqrt{Y/r}}
+\end{align*}
+has a (Student) $t$-distribution with $r$ degrees of freedom.
+We write $T \sim t_r$.
+
+Why are they useful?
+Suppose we have $X_1, X_2, \dots, X_n \sim N(\mu, \sigma^2)$, and let $\bar{X} = \frac{1}{n}\sum X_i$ be the sample mean, and $S^2 = \frac{1}{n-1}\sum (X_i - \bar{X})^2$ be the sample variance.
+Then, $\bar{X}$ and $S^2$ are independent and their marginal distributions are given by
+- $\bar{X} \sim N(\mu, \frac{\sigma^2}{n})$
+- $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}$.
+The proof of this requires a transformation of variables, and is not covered here.
+
+Using these distributions, we obtain the result that
+\begin{align*}
+    \frac{\bar{X} - \mu}{S/\sqrt{n}} \sim t_{n-1}.
+\end{align*}
+Practically this means that if we are estimating $\sigma$ by $S$ we use a $t$-distribution, however if $\sigma$ is known then it follows a $N(0,1)$ distribution.
+As $n \to \infty$ the two distributions converge.
+
+
+````
+
+
+
+
+**Links and Further Reading**
+ 
+- [Wikipedia (Chi-squared)](https://en.wikipedia.org/wiki/Chi-square_distribution) <br> 
+ 
+- [Wikipedia (Student's t)](https://en.wikipedia.org/wiki/Student%27s_t-distribution)  
+
+

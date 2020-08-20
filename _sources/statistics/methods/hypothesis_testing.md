@@ -1,0 +1,48 @@
+# Hypothesis Testing
+
+```{margin} Metadata
+**Tags**: 
+
+**Date Added**: 20/08/2020
+
+**Difficulty**: Easy
+```
+
+
+We are investigating whether a drug has an effect of increasing the IQ of participants.
+Their changes in IQ after taking the drug are
+\begin{align*}
+    0.7, −1.6, −0.2, −1.2, −0.1, 3.4, 3.7, 0.8, 0.0, 2.0.
+\end{align*}
+Does this data support the conclusion that the drug is effective? 
+
+````{toggle} Click to reveal answer
+**Answer**
+
+
+We want to test the hypothesis that the drug has no effect.
+In this case our hypothesis is $\mu_0=0$, the mean of the differences is unchanged.
+Our alternative hypothesis is $\mu_0 > 0$.
+This is a *one-sided* test, since we do not test whether the drug potentially reduces the IQ of the participants.
+
+We can calculate the $t$-statistic as 
+\begin{align*}
+    t_{\rm obs} = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = 3.68,
+\end{align*}
+since $\bar{x}=2.33, \mu_0=0, s^2=4.0, n=10$.
+
+If $H_0$ is true, then the probability of observing this value of $t(\vec{X})$ is
+\begin{align*}
+    p &= \Pr( t(\vec{X}) \ge 3.68) \\
+     &= \Pr(t_9 \ge 3.68) \\
+     &= 0.0025.
+\end{align*} 
+This means that, if $H_0$ is true, then we would see this result about $0.25\%$ of the time, that is, an extremely rare event.
+Under these conditions we would reject the null hypothesis.
+
+
+````
+
+
+
+

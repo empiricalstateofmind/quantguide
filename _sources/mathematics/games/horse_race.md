@@ -20,7 +20,7 @@ In this example any number of horses can be tied for a particular place.
 If ties were not possible this problem is very simple.
 There are $n$ ways to pick first place, $n-1$ ways to pick second place, and only one way to pick last place, so the total number of combinations is $n!$.
 
-However, if any number of ties are possible then it helps to phrase the problem slightly differently as *``How many ways can we put $n$ horses in $n$ buckets?''*
+However, if any number of ties are possible then it helps to phrase the problem slightly differently as *"How many ways can we put $n$ horses in $n$ buckets?"*
 Here the buckets are simply the finishing times (which are ordered, however that is irrelevant).
 As with many of these types of problems, it is worth looking at a small case to spot any patterns or tricks.
 Take the case where $n=4$, and let $k$ be the number of buckets.

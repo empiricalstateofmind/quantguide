@@ -5,27 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Interview Tips &#8212; Quantitative Guide</title>
+    <title>1. The Central Limit Theorem &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
@@ -36,24 +36,24 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/interview_tips.html" />
-    <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="author" title="About these documents" href="about.html" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Resources" href="resources.html" />
-    <link rel="prev" title="About" href="about.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/statistics/general/central_limit_theorem.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Games" href="../../mathematics/games/index.html" />
+    <link rel="prev" title="General" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/interview_tips.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/statistics/general/central_limit_theorem.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Interview Tips" />
-<meta property="og:description" content="Interview Tips" />
+<meta property="og:title"       content="The Central Limit Theorem" />
+<meta property="og:description" content="The Central Limit Theorem  Metadata  Tags:  Date Added: 20/08/2020  Difficulty: Easy  What is the central limit theorem and why is it important?  Answer  Let X_" />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -69,9 +69,9 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../../index.html">
   
-  <img src="_static/logo.png" class="logo" alt="logo">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Quantitative Guide</h1>
@@ -79,7 +79,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
@@ -87,7 +87,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../../intro.html">
    Quantitative Guide
   </a>
  </li>
@@ -97,24 +97,24 @@
   Introduction
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="about.html">
+  <a class="reference internal" href="../../about.html">
    About
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interview_tips.html">
    Interview Tips
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="resources.html">
+  <a class="reference internal" href="../../resources.html">
    Resources
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="contribute.html">
+  <a class="reference internal" href="../../contribute.html">
    Contribute
   </a>
  </li>
@@ -124,21 +124,28 @@
   Statistics
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="statistics/methods/index.html">
+  <a class="reference internal" href="../methods/index.html">
    Methods
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="statistics/distributions/index.html">
+  <a class="reference internal" href="../distributions/index.html">
    Distributions
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="statistics/general/index.html">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
    General
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. The Central Limit Theorem
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -148,12 +155,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/games/index.html">
+  <a class="reference internal" href="../../mathematics/games/index.html">
    Games
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/general/index.html">
+  <a class="reference internal" href="../../mathematics/general/index.html">
    General
   </a>
  </li>
@@ -165,7 +172,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="data_science/model_validation/index.html">
+  <a class="reference internal" href="../../data_science/model_validation/index.html">
    Model Validation
   </a>
  </li>
@@ -211,7 +218,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/interview_tips.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/statistics/general/central_limit_theorem.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -231,7 +238,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Finterview_tips.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fstatistics/general/central_limit_theorem.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -263,8 +270,36 @@
         
               <div>
                 
-  <div class="section" id="interview-tips">
-<h1>Interview Tips<a class="headerlink" href="#interview-tips" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="the-central-limit-theorem">
+<h1><span class="section-number">1. </span>The Central Limit Theorem<a class="headerlink" href="#the-central-limit-theorem" title="Permalink to this headline">¶</a></h1>
+<div class="margin sidebar">
+<p class="sidebar-title">Metadata</p>
+<p><strong>Tags</strong>:</p>
+<p><strong>Date Added</strong>: 20/08/2020</p>
+<p><strong>Difficulty</strong>: Easy</p>
+</div>
+<p>What is the central limit theorem and why is it important?</p>
+<div class="toggle docutils container">
+<p><strong>Answer</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(X_1, X_2, \dots, X_n\)</span> be i.i.d. from \emph{any} distribution with mean <span class="math notranslate nohighlight">\(\mu\)</span> and variance <span class="math notranslate nohighlight">\(\sigma^2 \in (0,\infty)\)</span>. Then, for all <span class="math notranslate nohighlight">\(x\)</span>,
+\begin{align*}
+\Pr\left(\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \le x \right) \to \Phi(x) \quad \text{as } n \to \infty.
+\end{align*}
+This means that the random variable <span class="math notranslate nohighlight">\(\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \approx N(0,1)\)</span>, regardless of the distribution of <span class="math notranslate nohighlight">\(X_i\)</span>.</p>
+<ul class="simple">
+<li><p>The Weak Law of Large Numbers tells us that the distribution of <span class="math notranslate nohighlight">\(\bar{X}\)</span> centers around <span class="math notranslate nohighlight">\(\mu\)</span> as <span class="math notranslate nohighlight">\(n\)</span> becomes large.</p></li>
+<li><p>The CLT states that fluctuations of <span class="math notranslate nohighlight">\(\bar{X}\)</span> around <span class="math notranslate nohighlight">\(\mu\)</span> are of order <span class="math notranslate nohighlight">\(1/\sqrt{n}\)</span>.</p></li>
+<li><p>The CLT states that the distribution of these fluctuations is normal.</p></li>
+</ul>
+<p>Why is this important?
+This powerful result shows that if we collect enough samples, the distribution of our statistics will be well behaved and follow a Gaussian distribution.
+This means that we can address many questions about our statistics very simply, e.g. find confidence intervals.
+This result does not however provide any intuition on how fast we converge to a normal distribution as the number of samples increases.</p>
+</div>
+<p><strong>Links and Further Reading</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Central_limit_theorem">Wikipedia</a></p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -280,7 +315,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./statistics/general"
         },
         predefinedOutput: true
     }
@@ -295,8 +330,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="about.html" title="previous page">About</a>
-    <a class='right-next' id="next-link" href="resources.html" title="next page">Resources</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">General</a>
+    <a class='right-next' id="next-link" href="../../mathematics/games/index.html" title="next page">Games</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -315,7 +350,7 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../../_static/js/index.js"></script>
     
     <!-- Google Analytics -->
     <script>

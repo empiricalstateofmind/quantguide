@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2. The Mystery Box &#8212; Quantitative Guide</title>
+    <title>1. Required Sample Size &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,23 +37,23 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/games/mystery_box.html" />
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/statistics/methods/sample_sizes.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Horse Race Outcomes" href="horse_race.html" />
-    <link rel="prev" title="1. Counting To Twenty" href="count_to_twenty.html" />
+    <link rel="next" title="2. Ridge and Lasso Regression" href="ridge_and_lasso.html" />
+    <link rel="prev" title="Methods" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/games/mystery_box.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/statistics/methods/sample_sizes.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="The Mystery Box" />
-<meta property="og:description" content="The Mystery Box  Metadata  Tags:  Date Added: 19/08/2020  Difficulty: Easy  A mystery box has an unspecified amount of money in it, however we know that it is d" />
+<meta property="og:title"       content="Required Sample Size" />
+<meta property="og:description" content="Required Sample Size  Metadata  Tags:  Date Added: 20/08/2020  Difficulty: Easy  You want to run an opinion poll (for an election) which has two possibilities (" />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -124,19 +124,41 @@
   Statistics
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/methods/index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
    Methods
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Required Sample Size
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ridge_and_lasso.html">
+     2. Ridge and Lasso Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hypothesis_testing.html">
+     3. Hypothesis Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variance_bias_tradeoff.html">
+     4. Bias-Variance Tradeoff
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/distributions/index.html">
+  <a class="reference internal" href="../distributions/index.html">
    Distributions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/general/index.html">
+  <a class="reference internal" href="../general/index.html">
    General
   </a>
  </li>
@@ -146,31 +168,14 @@
   Mathematics
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="index.html">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics/games/index.html">
    Games
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="count_to_twenty.html">
-     1. Counting To Twenty
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2. The Mystery Box
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="horse_race.html">
-     3. Horse Race Outcomes
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../general/index.html">
+  <a class="reference internal" href="../../mathematics/general/index.html">
    General
   </a>
  </li>
@@ -228,7 +233,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/mathematics/games/mystery_box.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/statistics/methods/sample_sizes.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -248,7 +253,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/games/mystery_box.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fstatistics/methods/sample_sizes.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -280,42 +285,38 @@
         
               <div>
                 
-  <div class="section" id="the-mystery-box">
-<h1><span class="section-number">2. </span>The Mystery Box<a class="headerlink" href="#the-mystery-box" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="required-sample-size">
+<h1><span class="section-number">1. </span>Required Sample Size<a class="headerlink" href="#required-sample-size" title="Permalink to this headline">¶</a></h1>
 <div class="margin sidebar">
 <p class="sidebar-title">Metadata</p>
 <p><strong>Tags</strong>:</p>
-<p><strong>Date Added</strong>: 19/08/2020</p>
+<p><strong>Date Added</strong>: 20/08/2020</p>
 <p><strong>Difficulty</strong>: Easy</p>
 </div>
-<p>A mystery box has an unspecified amount of money in it, however we know that it is distributed uniformly between £0 and £1,000,000.
-The amount in the box is known to the owner however.
-The owner invites you to play a game where you bid <span class="math notranslate nohighlight">\(B \in [0,1,000,000]\)</span> for the box.
-If <span class="math notranslate nohighlight">\(B \ge \frac{2}{3}T\)</span> where <span class="math notranslate nohighlight">\(T\)</span> is the amount in the box, you win the box, otherwise the bid is not accepted and nothing happens.
-What is the optimum amount to bid for the box?</p>
+<p>You want to run an opinion poll (for an election) which has two possibilities (Party A and Party B).
+How many people do you need to query to get an error of <span class="math notranslate nohighlight">\(\pm x\%\)</span>?
+To clarity this is <span class="math notranslate nohighlight">\(\Pr(\hat{p} - x/100 &lt; p &lt; \hat{p} + x/100)\)</span>, and not <span class="math notranslate nohighlight">\(\Pr(\hat{p}(100-x)/100 &lt; p &lt; \hat{p}(100+x)/100)\)</span>.</p>
 <div class="toggle docutils container">
 <p><strong>Answer</strong></p>
-<p>To make this question easier, it is useful to rescale everything to between zero and one, so that we know <span class="math notranslate nohighlight">\(T \sim \text{Unif}(0,1)\)</span>.
-We want to work out the expected return from a guess <span class="math notranslate nohighlight">\(B\)</span>.
-From the problem we have two things that happen, our bid is rejected and we win nothing, or our bid is accepted.</p>
-<p>Without any prior information on the box we can easily calculate the expectation <span class="math notranslate nohighlight">\(E(T)=0.5\)</span>.
-If our bid is accepted, we now know something else about the box, namely that <span class="math notranslate nohighlight">\(T&lt;\frac{3}{2}B\)</span>.
-In this case we now now that <span class="math notranslate nohighlight">\((T|\text{Accepted}) \sim \text{Unif}(0,\frac{3}{2}B)\)</span>, which has expectation <span class="math notranslate nohighlight">\(\frac{3}{4}B\)</span>.
-In this case our expected payoff is <span class="math notranslate nohighlight">\(P = \frac{3}{4}B - B = -\frac{1}{4}B\)</span>.
-Clearly this is negative for any choice of <span class="math notranslate nohighlight">\(B\)</span>, and so our optimal choice is <span class="math notranslate nohighlight">\(B=0\)</span>.
-Since we have a choice between a negative payoff and zero, we do not need to factor in the probabilities of acceptance.</p>
-<p>Note, this question is sometimes equally phrased as “acceptance if <span class="math notranslate nohighlight">\(B\)</span> is greater than <span class="math notranslate nohighlight">\(T\)</span>, however the payoff is <span class="math notranslate nohighlight">\(1.5T\)</span>.”
-You can repeat the exercise above to see they are equivalent.</p>
+<p>Let <span class="math notranslate nohighlight">\(X_1, X_2, \dots, X_n\)</span> be a random sample from the <span class="math notranslate nohighlight">\(Bernoulli(p)\)</span> distribution, i.e., <span class="math notranslate nohighlight">\(\Pr(X_i=1)=p\)</span> and <span class="math notranslate nohighlight">\(\Pr(X_i=0)=1-p\)</span>.
+The maximum likelihood estimate of <span class="math notranslate nohighlight">\(p\)</span> is <span class="math notranslate nohighlight">\(\bar{X}\)</span>.
+We also know <span class="math notranslate nohighlight">\(E[X_i]=p\)</span> and <span class="math notranslate nohighlight">\(Var{X_i} = p(1-p) = \sigma^2(p)\)</span>.</p>
+<p>For large <span class="math notranslate nohighlight">\(n\)</span>, by the central limit theorem
+\begin{align*}
+\frac{\bar{X}-p}{\sigma(p)/\sqrt{n}} \approx N(0,1),
+\end{align*}
+and so
+\begin{align*}
+\Pr(\hat{p} - x &lt; p &lt; \hat{p} + x) &amp;= \Pr\left( \frac{-x}{\sigma(p)/\sqrt{n}} &lt; \frac{p-\hat{p}}{\sigma(p)/\sqrt{n}} &lt; \frac{x}{\sigma(p)/\sqrt{n}} \right) \
+&amp;\approx \Phi\left(\frac{x}{\sigma(p)/\sqrt{n}}\right) - \Phi\left(\frac{-x}{\sigma(p)/\sqrt{n}}\right) \
+&amp;\ge \Phi(x\sqrt{4n}) - \Phi(x\sqrt{4n}).<br />
+\end{align*}
+The last line appears from the fact that <span class="math notranslate nohighlight">\(\sigma^2(p) = p(1-p) \le 1/4\)</span> (as <span class="math notranslate nohighlight">\(p(1-p)\)</span> is maximised for <span class="math notranslate nohighlight">\(p=1/2\)</span>).
+For the probability to be at least <span class="math notranslate nohighlight">\(0.95\)</span> we require <span class="math notranslate nohighlight">\(x\sqrt{4n} \ge 1.96\)</span>, or <span class="math notranslate nohighlight">\(n \ge (1.96/2x)^2\)</span>.
+For <span class="math notranslate nohighlight">\(x=0.03\)</span> (<span class="math notranslate nohighlight">\(3\%\)</span> error), this require <span class="math notranslate nohighlight">\(n \ge 1067\)</span> people.</p>
+<p>More generally, the variance of <span class="math notranslate nohighlight">\(\bar{X}\)</span> scales like <span class="math notranslate nohighlight">\(1/n\)</span>, and so the standard deviation scales like <span class="math notranslate nohighlight">\(1/\sqrt{n}\)</span>.
+As a consequence, if we wanted to halve the standard deviation, we would need to have four times more data.</p>
 </div>
-<p><strong>Interviews</strong></p>
-<p>This question has been asked at the following companies:</p>
-<ul class="simple">
-<li><p>Squarepoint Capital (Telephone Interview)</p></li>
-</ul>
-<p><strong>Links and Further Reading</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/The_Market_for_Lemons">General principle - the ‘Market for Lemons’</a></p></li>
-</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -331,7 +332,7 @@ You can repeat the exercise above to see they are equivalent.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./mathematics/games"
+            path: "./statistics/methods"
         },
         predefinedOutput: true
     }
@@ -346,8 +347,8 @@ You can repeat the exercise above to see they are equivalent.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="count_to_twenty.html" title="previous page"><span class="section-number">1. </span>Counting To Twenty</a>
-    <a class='right-next' id="next-link" href="horse_race.html" title="next page"><span class="section-number">3. </span>Horse Race Outcomes</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Methods</a>
+    <a class='right-next' id="next-link" href="ridge_and_lasso.html" title="next page"><span class="section-number">2. </span>Ridge and Lasso Regression</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

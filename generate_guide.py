@@ -38,7 +38,7 @@ def main():
             category = parsed['category']
             subcategory = parsed['subcategory']
             slug = parsed['slug']
-            filepath = f'{category.lower()}/{subcategory.lower()}/{slug}'
+            filepath = f'{category.lower().replace(" ", "_")}/{subcategory.lower().replace(" ", "_")}/{slug}'
             store[category][subcategory].append(filepath)
 
     # Build TOC
@@ -51,7 +51,7 @@ def main():
     # For now these are just titles but we might add something more.
     for cat, d in store.items(): 
         for subcat, _ in d.items():
-            with open(f'guide/{cat.lower()}/{subcat.lower()}/index.md','w') as f:
+            with open(f'guide/{cat.lower().replace(" ", "_")}/{subcat.lower().replace(" ", "_")}/index.md','w') as f:
                 f.write(f'# {subcat}' + '\n\n ```{tableofcontents}\n```')
 
 
@@ -69,7 +69,7 @@ def build_toc(entry_store:dict):
         base = {'part': cat,
                 'chapters': []}
         for subcat, l in d.items():
-            subbase = {'file': f'{cat.lower()}/{subcat.lower()}/index',
+            subbase = {'file': f'{cat.lower().replace(" ", "_")}/{subcat.lower().replace(" ", "_")}/index',
                     'numbered': True,
                     'sections': [{'file':f} for f in l]}
             base['chapters'].append(subbase)
@@ -92,8 +92,8 @@ def convert_to_markdown(entry:dict, template_path:str='./templates/onepage.md.ji
         tmpl = Template(f.read())
     page = tmpl.render(**entry)
 
-    folder = entry['category'].lower()
-    subfolder = entry['subcategory'].lower()
+    folder = entry['category'].lower().replace(' ', '_')
+    subfolder = entry['subcategory'].lower().replace(' ', '_')
     slug = entry['slug']
     filepath = f'guide/{folder}/{subfolder}'
 

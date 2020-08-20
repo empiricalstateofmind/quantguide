@@ -160,6 +160,9 @@ def parse_xml(root:et.ElementTree):
     parsed['links'] = {x.get('name'):x.text for x in root.findall('link')}
     parsed['include'] = bool(root.find('include').text)
 
+    if parsed['answer'].strip('\n') == '':
+        parsed['answer'] = None
+
     return parsed
 
 if __name__ == "__main__":

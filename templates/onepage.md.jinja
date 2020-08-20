@@ -11,8 +11,11 @@
 {{ question }}
 ````{toggle} Click to reveal answer
 **Answer**
-
+{% if links is defined and links|length %}
 {{ answer }}
+{% else %}
+No answer currently provided. Please feel free to [contribute an answer](https://github.com/empiricalstateofmind/quantguide/tree/master/source).
+{% endif %}
 ````
 
 {% if interviews is defined and interviews|length %}
@@ -26,8 +29,8 @@ This question has been asked at the following companies:
 
 {% if links is defined and links|length %}
 **Links and Further Reading**
-{% for link in links %} 
-- {{ link }} {% if not loop.last %}<br>{% endif %} 
+{% for name,link in links.items() %} 
+- [{{ name }}]({{ link }}) {% if not loop.last %}<br>{% endif %} 
 {% endfor %}
 {% endif %}
 

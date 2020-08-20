@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Games &#8212; Quantitative Guide</title>
+    <title>3. Horse Race Outcomes &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,23 +37,23 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/games/index.html" />
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/games/horse_race.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. Counting To Twenty" href="count_to_twenty.html" />
-    <link rel="prev" title="Contribute" href="../../contribute.html" />
+    <link rel="next" title="General" href="../general/index.html" />
+    <link rel="prev" title="2. The Mystery Box" href="mystery_box.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/games/index.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/games/horse_race.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Games" />
-<meta property="og:description" content="Games  Counting To Twenty  The Mystery Box  Horse Race Outcomes  " />
+<meta property="og:title"       content="Horse Race Outcomes" />
+<meta property="og:description" content="Horse Race Outcomes  Metadata  Tags:  Date Added: 20/08/2020  Difficulty: Medium  There are n horses that run a race. What are the number of possible ways that " />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -121,10 +121,10 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Games
   </a>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="count_to_twenty.html">
      1. Counting To Twenty
@@ -135,8 +135,8 @@
      2. The Mystery Box
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="horse_race.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      3. Horse Race Outcomes
     </a>
    </li>
@@ -189,7 +189,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/mathematics/games/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/mathematics/games/horse_race.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -209,7 +209,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/games/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/games/horse_race.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -241,17 +241,88 @@
         
               <div>
                 
-  <div class="section" id="games">
-<h1>Games<a class="headerlink" href="#games" title="Permalink to this headline">¶</a></h1>
-<div class="tableofcontents-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="count_to_twenty.html">1. Counting To Twenty</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mystery_box.html">2. The Mystery Box</a></li>
-<li class="toctree-l1"><a class="reference internal" href="horse_race.html">3. Horse Race Outcomes</a></li>
+  <div class="section" id="horse-race-outcomes">
+<h1><span class="section-number">3. </span>Horse Race Outcomes<a class="headerlink" href="#horse-race-outcomes" title="Permalink to this headline">¶</a></h1>
+<div class="margin sidebar">
+<p class="sidebar-title">Metadata</p>
+<p><strong>Tags</strong>:</p>
+<p><strong>Date Added</strong>: 20/08/2020</p>
+<p><strong>Difficulty</strong>: Medium</p>
+</div>
+<p>There are <span class="math notranslate nohighlight">\(n\)</span> horses that run a race.
+What are the number of possible ways that the race can finish?
+In this example any number of horses can be tied for a particular place.</p>
+<div class="toggle docutils container">
+<p><strong>Answer</strong></p>
+<p>If ties were not possible this problem is very simple.
+There are <span class="math notranslate nohighlight">\(n\)</span> ways to pick first place, <span class="math notranslate nohighlight">\(n-1\)</span> ways to pick second place, and only one way to pick last place, so the total number of combinations is <span class="math notranslate nohighlight">\(n!\)</span>.</p>
+<p>However, if any number of ties are possible then it helps to phrase the problem slightly differently as <em>``How many ways can we put <span class="math notranslate nohighlight">\(n\)</span> horses in <span class="math notranslate nohighlight">\(n\)</span> buckets?’’</em>
+Here the buckets are simply the finishing times (which are ordered, however that is irrelevant).
+As with many of these types of problems, it is worth looking at a small case to spot any patterns or tricks.
+Take the case where <span class="math notranslate nohighlight">\(n=4\)</span>, and let <span class="math notranslate nohighlight">\(k\)</span> be the number of buckets.
+For <span class="math notranslate nohighlight">\(k=1\)</span> buckets, all horses have the same time, and there are no rearrangements possible, so only one outcome.
+For <span class="math notranslate nohighlight">\(k=2\)</span> buckets, we split the horses (1)(3), or (2)(2).
+There are <span class="math notranslate nohighlight">\(7\)</span> ways to do this, and <span class="math notranslate nohighlight">\(2!\)</span> ways to arrange the buckets.
+For <span class="math notranslate nohighlight">\(k=3\)</span> we have <span class="math notranslate nohighlight">\(6\)</span> possible partitions and <span class="math notranslate nohighlight">\(3!\)</span> arrangements.
+Finally for <span class="math notranslate nohighlight">\(k=4\)</span> we have our `without ties’ case, so <span class="math notranslate nohighlight">\(4!\)</span> possible arrangements.
+In total this gives us <span class="math notranslate nohighlight">\(75\)</span> possible ways the race could end.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Buckets</p></th>
+<th class="head"><p>Partitions</p></th>
+<th class="head"><p># Partitions</p></th>
+<th class="head"><p>Arrangements</p></th>
+<th class="head"><p>Outcomes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>(ABCD)</p></td>
+<td><p>1</p></td>
+<td><p>1!</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>(A)(BCD), (B)(ACD), …</p></td>
+<td><p>7</p></td>
+<td><p>2!</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>(A)(B)(CD), (A)(C)(BD), …</p></td>
+<td><p>6</p></td>
+<td><p>3!</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>(A)(B)(C)(D)</p></td>
+<td><p>1</p></td>
+<td><p>4!</p></td>
+<td><p>24</p></td>
+</tr>
+</tbody>
+</table>
+<p>The key step is to find the inductive step, to see how the answer changes as we increase <span class="math notranslate nohighlight">\(n\)</span>.
+Let <span class="math notranslate nohighlight">\(S(n,k)\)</span> denote the number of ways that <span class="math notranslate nohighlight">\(n\)</span> horses can finish with <span class="math notranslate nohighlight">\(k\)</span> distinct times.
+Suppose we add another horse, so we have <span class="math notranslate nohighlight">\(n+1\)</span> horses finishing in <span class="math notranslate nohighlight">\(k\)</span> buckets.
+There are two possible cases:</p>
+<ol class="simple">
+<li><p>The extra horse is alone in a bucket, and so the other horses much comprise of <span class="math notranslate nohighlight">\(k-1\)</span> buckets, which is done in <span class="math notranslate nohighlight">\(S(n, k-1)\)</span> ways.</p></li>
+<li><p>The extra house is in one of the <span class="math notranslate nohighlight">\(k\)</span> buckets, which is done in <span class="math notranslate nohighlight">\(S(n,k)\)</span> ways.</p></li>
+</ol>
+<p>This gives us the recurrence relation <span class="math notranslate nohighlight">\(S(n+1,k) = S(n-1,k) + S(n,k)\)</span>, for <span class="math notranslate nohighlight">\(n &gt; k\)</span>.
+This recurrence gives rise to the well known <em>ordered Bell numbers</em> or <em>Fubini numbers</em>.
+There is not a closed-form expression for these numbers, although there are a number of different expressions to calculate them.</p>
+</div>
+<p><strong>Interviews</strong></p>
+<p>This question has been asked at the following companies:</p>
+<ul class="simple">
+<li><p>GSA (Telephone Interview)</p></li>
 </ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<p><strong>Links and Further Reading</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.qbyte.org/puzzles/p131s.html">QByte problem discussion</a></p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -282,8 +353,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../../contribute.html" title="previous page">Contribute</a>
-    <a class='right-next' id="next-link" href="count_to_twenty.html" title="next page"><span class="section-number">1. </span>Counting To Twenty</a>
+    <a class='left-prev' id="prev-link" href="mystery_box.html" title="previous page"><span class="section-number">2. </span>The Mystery Box</a>
+    <a class='right-next' id="next-link" href="../general/index.html" title="next page">General</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,0 +1,71 @@
+# Horse Race Outcomes
+
+```{margin} Metadata
+**Tags**: 
+
+**Date Added**: 20/08/2020
+
+**Difficulty**: Medium
+```
+
+
+There are $n$ horses that run a race. 
+What are the number of possible ways that the race can finish?
+In this example any number of horses can be tied for a particular place.
+
+````{toggle} Click to reveal answer
+**Answer**
+
+
+If ties were not possible this problem is very simple.
+There are $n$ ways to pick first place, $n-1$ ways to pick second place, and only one way to pick last place, so the total number of combinations is $n!$.
+
+However, if any number of ties are possible then it helps to phrase the problem slightly differently as *``How many ways can we put $n$ horses in $n$ buckets?''*
+Here the buckets are simply the finishing times (which are ordered, however that is irrelevant).
+As with many of these types of problems, it is worth looking at a small case to spot any patterns or tricks.
+Take the case where $n=4$, and let $k$ be the number of buckets.
+For $k=1$ buckets, all horses have the same time, and there are no rearrangements possible, so only one outcome.
+For $k=2$ buckets, we split the horses (1)(3), or (2)(2).
+There are $7$ ways to do this, and $2!$ ways to arrange the buckets.
+For $k=3$ we have $6$ possible partitions and $3!$ arrangements.
+Finally for $k=4$ we have our `without ties' case, so $4!$ possible arrangements.
+In total this gives us $75$ possible ways the race could end.
+
+| Buckets 	| Partitions 	| # Partitions 	| Arrangements 	| Outcomes 	|
+|---------	|------------	|--------------	|--------------	|----------	|
+| 1       	| (ABCD)     	| 1            	| 1!           	| 1        	|
+| 2       	| (A)(BCD), (B)(ACD), ...           	| 7             	| 2!             	| 14         	|
+| 3        	| (A)(B)(CD), (A)(C)(BD), ...           	| 6             	| 3!             	| 36         	|
+| 4       	| (A)(B)(C)(D)           	| 1             	| 4!             	| 24         	|
+
+The key step is to find the inductive step, to see how the answer changes as we increase $n$.
+Let $S(n,k)$ denote the number of ways that $n$ horses can finish with $k$ distinct times.
+Suppose we add another horse, so we have $n+1$ horses finishing in $k$ buckets.
+There are two possible cases:
+
+1. The extra horse is alone in a bucket, and so the other horses much comprise of $k-1$ buckets, which is done in $S(n, k-1)$ ways.
+
+2. The extra house is in one of the $k$ buckets, which is done in $S(n,k)$ ways.
+
+This gives us the recurrence relation $S(n+1,k) = S(n-1,k) + S(n,k)$, for $n > k$.
+This recurrence gives rise to the well known *ordered Bell numbers* or *Fubini numbers*.
+There is not a closed-form expression for these numbers, although there are a number of different expressions to calculate them.
+
+
+````
+
+
+**Interviews**
+
+This question has been asked at the following companies:
+ 
+- GSA (Telephone Interview)
+
+
+
+
+**Links and Further Reading**
+ 
+- [QByte problem discussion](http://www.qbyte.org/puzzles/p131s.html)  
+
+

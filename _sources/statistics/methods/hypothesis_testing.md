@@ -1,13 +1,5 @@
 # Hypothesis Testing
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 We are investigating whether a drug has an effect of increasing the IQ of participants.
 Their changes in IQ after taking the drug are

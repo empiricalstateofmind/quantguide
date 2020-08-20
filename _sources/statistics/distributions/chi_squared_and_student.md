@@ -1,13 +1,5 @@
 # Chi-Squared and Student's t Distributions
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Medium
-```
-
 
 What are the $\chi^2$ and Student's $t$ distribution?
 How are they related to the normal distribution, and why are they useful?

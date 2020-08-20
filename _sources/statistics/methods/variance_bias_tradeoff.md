@@ -1,13 +1,5 @@
 # Bias-Variance Tradeoff
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 What is the variance-bias trade-off?
 

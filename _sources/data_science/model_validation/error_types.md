@@ -1,13 +1,5 @@
 # Type I and II Errors
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy 
-```
-
 
 What is the difference between a Type I and Type II error?
 What is a confusion matrix?

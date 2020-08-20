@@ -5,27 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Interview Tips &#8212; Quantitative Guide</title>
+    <title>3. Non-consecutive Tails &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
@@ -36,24 +36,24 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/interview_tips.html" />
-    <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="author" title="About these documents" href="about.html" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Resources" href="resources.html" />
-    <link rel="prev" title="About" href="about.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/probability/nonconsecutive_tails.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Games" href="../games/index.html" />
+    <link rel="prev" title="2. Covariance of Two Brownian Motions" href="bm_covariance.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/interview_tips.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/probability/nonconsecutive_tails.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Interview Tips" />
-<meta property="og:description" content="Interview Tips" />
+<meta property="og:title"       content="Non-consecutive Tails" />
+<meta property="og:description" content="Non-consecutive Tails  We toss a fair coin n times. What is the probability that there are no consecutive tails?  Answer  If a coin is tossed n times, there are" />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -69,9 +69,9 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../../index.html">
   
-  <img src="_static/logo.png" class="logo" alt="logo">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Quantitative Guide</h1>
@@ -79,7 +79,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
@@ -87,7 +87,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../../intro.html">
    Quantitative Guide
   </a>
  </li>
@@ -97,24 +97,24 @@
   Introduction
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="about.html">
+  <a class="reference internal" href="../../about.html">
    About
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interview_tips.html">
    Interview Tips
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="resources.html">
+  <a class="reference internal" href="../../resources.html">
    Resources
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="contribute.html">
+  <a class="reference internal" href="../../contribute.html">
    Contribute
   </a>
  </li>
@@ -126,17 +126,17 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="statistics/methods/index.html">
+  <a class="reference internal" href="../../statistics/methods/index.html">
    Methods
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="statistics/distributions/index.html">
+  <a class="reference internal" href="../../statistics/distributions/index.html">
    Distributions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="statistics/general/index.html">
+  <a class="reference internal" href="../../statistics/general/index.html">
    General
   </a>
  </li>
@@ -146,19 +146,36 @@
   Mathematics
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/probability/index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
    Probability
   </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="unknown_ball.html">
+     1. The Unknown Ball
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bm_covariance.html">
+     2. Covariance of Two Brownian Motions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3. Non-consecutive Tails
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/games/index.html">
+  <a class="reference internal" href="../games/index.html">
    Games
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="mathematics/general/index.html">
+  <a class="reference internal" href="../general/index.html">
    General
   </a>
  </li>
@@ -170,7 +187,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="finance/basics/index.html">
+  <a class="reference internal" href="../../finance/basics/index.html">
    Basics
   </a>
  </li>
@@ -182,7 +199,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="data_science/model_validation/index.html">
+  <a class="reference internal" href="../../data_science/model_validation/index.html">
    Model Validation
   </a>
  </li>
@@ -228,7 +245,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/interview_tips.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/mathematics/probability/nonconsecutive_tails.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -248,7 +265,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Finterview_tips.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/probability/nonconsecutive_tails.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -280,8 +297,34 @@
         
               <div>
                 
-  <div class="section" id="interview-tips">
-<h1>Interview Tips<a class="headerlink" href="#interview-tips" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="non-consecutive-tails">
+<h1><span class="section-number">3. </span>Non-consecutive Tails<a class="headerlink" href="#non-consecutive-tails" title="Permalink to this headline">¶</a></h1>
+<p>We toss a fair coin <span class="math notranslate nohighlight">\(n\)</span> times.
+What is the probability that there are no consecutive tails?</p>
+<div class="toggle docutils container">
+<p><strong>Answer</strong></p>
+<p>If a coin is tossed <span class="math notranslate nohighlight">\(n\)</span> times, there are <span class="math notranslate nohighlight">\(2^n\)</span> possible combinations of heads/tails.
+We now need to count how many of these have no consecutive tails.
+Let <span class="math notranslate nohighlight">\(f(n)\)</span> be the number of sequences without two consecutive tails.
+The base cases are <span class="math notranslate nohighlight">\(f(1) = 1\)</span> and <span class="math notranslate nohighlight">\(f(2)=3\)</span>, which can be seen easily by inspection.
+Suppose we have a sequence of length <span class="math notranslate nohighlight">\(n\)</span>.
+This was made either by adding a <span class="math notranslate nohighlight">\(H\)</span> to a sequence of length <span class="math notranslate nohighlight">\(n-1\)</span>, or by adding <span class="math notranslate nohighlight">\(HT\)</span> to a sequence of length <span class="math notranslate nohighlight">\(n-2\)</span>.
+We therefore have the recurrence relationship
+\begin{align*}
+f(n) = f(n-1) + f(n-1).
+\end{align*}
+For those familiar with it, this is the <em>Fibonacci sequence</em>, <span class="math notranslate nohighlight">\(F(n)\)</span>, shifted by two terms.
+This has closed form solution <span class="math notranslate nohighlight">\(F(n) = (\phi_+^n - \phi_-^n)/\sqrt{5}\)</span>, where <span class="math notranslate nohighlight">\(\phi_\pm = (1 \pm \sqrt{5})/2\)</span>.</p>
+<p>The probability that no two consecutive tails appear in a sequence of <span class="math notranslate nohighlight">\(n\)</span> coin tosses is therefore
+\begin{align*}
+F(n+2)/2^n = (\phi_+^{n+2} - \phi_-^{n+2})/(\sqrt{5} \cdot 2^n).
+\end{align*}</p>
+</div>
+<p><strong>Interviews</strong></p>
+<p>This question has been asked at the following companies:</p>
+<ul class="simple">
+<li><p>GSA (Telephone Interview)</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -297,7 +340,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./mathematics/probability"
         },
         predefinedOutput: true
     }
@@ -312,8 +355,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="about.html" title="previous page">About</a>
-    <a class='right-next' id="next-link" href="resources.html" title="next page">Resources</a>
+    <a class='left-prev' id="prev-link" href="bm_covariance.html" title="previous page"><span class="section-number">2. </span>Covariance of Two Brownian Motions</a>
+    <a class='right-next' id="next-link" href="../games/index.html" title="next page">Games</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -332,7 +375,7 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../../_static/js/index.js"></script>
     
     <!-- Google Analytics -->
     <script>

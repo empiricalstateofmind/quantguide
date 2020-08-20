@@ -1,13 +1,5 @@
 # Horse Race Outcomes
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Medium
-```
-
 
 There are $n$ horses that run a race. 
 What are the number of possible ways that the race can finish?

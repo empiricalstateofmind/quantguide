@@ -1,0 +1,32 @@
+# Poisoned Chocolate
+
+
+Suppose we have a chocolate bar which can be thought of as a 10x10 grid of pieces.
+This chocolate bar has one piece which is laden with cyanide, and we know this piece is in the bottom left corner.
+
+We play a two-person game where a player breaks the chocolate along an axis (at any point), and hands the remaining part with the poison to the other player, who does the same. 
+The game finishes when a player is left with the single poisoned piece, and they obviously lose!
+
+You are given the chance to go first or second.
+Which do you prefer?
+Given your choice, what is the best strategy to follow?
+
+As a follow up question, how may you program a computer to come up with the best strategy?
+
+````{toggle} Click to reveal answer
+**Answer**
+
+No answer currently provided. Please feel free to [contribute an answer](https://github.com/empiricalstateofmind/quantguide/tree/master/source).
+
+````
+
+
+**Interviews**
+
+This question has been asked at the following companies:
+ 
+- JPM Credit Quant Desk (Telephone Interview)
+
+
+
+

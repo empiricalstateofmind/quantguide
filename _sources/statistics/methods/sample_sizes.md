@@ -1,13 +1,5 @@
 # Required Sample Size
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 You want to run an opinion poll (for an election) which has two possibilities (Party A and Party B). 
 How many people do you need to query to get an error of $\pm x\%$?

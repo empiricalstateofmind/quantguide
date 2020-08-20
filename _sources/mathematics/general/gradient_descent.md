@@ -1,13 +1,5 @@
 # Gradient Descent
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 19/08/2020
-
-**Difficulty**: Easy
-```
-
 
 What is the advantage of a convex loss function when using gradient descent?
 Prove that a convex function has at most one minimum.

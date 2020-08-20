@@ -1,13 +1,5 @@
 # Precision and Recall
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 Explain what precision and recall are.
 How do they relate to the ROC curve?

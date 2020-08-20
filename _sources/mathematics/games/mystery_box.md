@@ -1,13 +1,5 @@
 # The Mystery Box
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 19/08/2020
-
-**Difficulty**: Easy
-```
-
 
 A mystery box has an unspecified amount of money in it, however we know that it is distributed uniformly between £0 and £1,000,000.
 The amount in the box is known to the owner however.

@@ -1,13 +1,5 @@
 # Ridge and Lasso Regression
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 What is the difference between lasso and ridge regression, i.e. the difference between the L1- and L2-norm?
 Why does the L1-norm specifically produce zero (or extremely small coefficients)?

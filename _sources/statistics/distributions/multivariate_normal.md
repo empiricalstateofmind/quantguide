@@ -1,13 +1,5 @@
 # Multivariate Normal Distribution
 
-```{margin} Metadata
-**Tags**: 
-
-**Date Added**: 20/08/2020
-
-**Difficulty**: Easy
-```
-
 
 What is the PDF of the multivariate normal distribution?
 Explain what each term means.

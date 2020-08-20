@@ -52,13 +52,19 @@ def main():
     for cat, d in store.items(): 
         for subcat, _ in d.items():
             with open(f'guide/{cat.lower()}/{subcat.lower()}/index.md','w') as f:
-                f.write(f'# {subcat}')
+                f.write(f'# {subcat}' + '\n\n ```{tableofcontents}\n```')
 
 
 def build_toc(entry_store:dict):
     """Build the TOC using the stored entries."""
 
-    complete = [{'file': 'intro', 'numbered': False}]
+    complete = [{'file': 'intro', 'numbered': False},
+                {'part':'Introduction',
+                 'chapters':[
+                     {'file': 'about'},
+                     {'file': 'interview_tips'},
+                     {'file': 'contribute'},
+                 ]}]
     for cat, d in entry_store.items():
         base = {'part': cat,
                 'chapters': []}

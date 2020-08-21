@@ -160,6 +160,10 @@ def parse_xml(root:et.ElementTree):
     parsed['links'] = {x.get('name'):x.text for x in root.findall('link')}
     parsed['include'] = bool(root.find('include').text)
 
+    # I'm not 100% sure whether this is not just a jupyter-book issue
+    parsed['answer'] = parsed['answer'].replace(r"\\", r"\\\\\\\\") # Fixes align newlines.
+    parsed['question'] = parsed['question'].replace(r"\\\\", r"\\\\\\\\") # Fixes align newlines.
+    
     if parsed['answer'].strip('\n') == '':
         parsed['answer'] = None
 

@@ -25,8 +25,8 @@ since $\bar{x}=2.33, \mu_0=0, s^2=4.0, n=10$.
 
 If $H_0$ is true, then the probability of observing this value of $t(\vec{X})$ is
 \begin{align*}
-    p &= \Pr( t(\vec{X}) \ge 3.68) \\
-     &= \Pr(t_9 \ge 3.68) \\
+    p &= \Pr( t(\vec{X}) \ge 3.68) \\\\\\\\
+     &= \Pr(t_9 \ge 3.68) \\\\\\\\
      &= 0.0025.
 \end{align*} 
 This means that, if $H_0$ is true, then we would see this result about $0.25\%$ of the time, that is, an extremely rare event.

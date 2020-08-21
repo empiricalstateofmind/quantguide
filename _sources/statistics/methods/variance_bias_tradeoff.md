@@ -14,9 +14,9 @@ The mean-squared error of our estimator is given by $MSE(T) = E[(T-\mu)^2]$.
 The bias of our estimator is $b(T) = E[T] - \mu = \theta - \mu$.
 Rewritting our expression for the MSE we get
 \begin{align*}
-    MSE(T) &= E[\{ (T-\theta) + (\theta - \mu)\}^2] \\
-    &= E[ (T-\theta)^2 + 2(T-\theta)(\theta - \mu) + (\theta - \mu)^2] \\
-    &= E[(T-\theta)^2] + 2(\theta - \mu) \cdot 0 + b(T)^2 \\
+    MSE(T) &= E[\{ (T-\theta) + (\theta - \mu)\}^2] \\\\\\\\
+    &= E[ (T-\theta)^2 + 2(T-\theta)(\theta - \mu) + (\theta - \mu)^2] \\\\\\\\
+    &= E[(T-\theta)^2] + 2(\theta - \mu) \cdot 0 + b(T)^2 \\\\\\\\
     &= Var(T) + b(T)^2.
 \end{align*}
 This shows us that if we want to minimise the error on our estimator then this is not necessarily achieved with an unbiased estimator if it has high variance. 

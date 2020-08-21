@@ -11,12 +11,12 @@ Why does the L1-norm specifically produce zero (or extremely small coefficients)
 The lasso regression uses the L1-norm as a coefficient penalty, whereas ridge regression uses the L2-norm as a coefficient penalty.
 Specifically the loss functions are:
 \begin{align*}
-    L_{\rm Ridge} &= (y - X \beta)^T(y - X \beta) - \beta^T\beta, \\
+    L_{\rm Ridge} &= (y - X \beta)^T(y - X \beta) - \beta^T\beta, \\\\\\\\
     L_{\rm Lasso} &= (y - X \beta)^T(y - X \beta) - |\beta|.
 \end{align*}
 Alternatively we can write these elementwise as
 \begin{align*}
-    L_{\rm Ridge} &= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i \beta_i^2, \\
+    L_{\rm Ridge} &= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i \beta_i^2, \\\\\\\\
     L_{\rm Lasso} &= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i |\beta_i|.
 \end{align*}
 

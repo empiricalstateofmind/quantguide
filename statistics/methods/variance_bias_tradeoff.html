@@ -313,9 +313,9 @@ Let the true value of the mean be <span class="math notranslate nohighlight">\(\
 The bias of our estimator is <span class="math notranslate nohighlight">\(b(T) = E[T] - \mu = \theta - \mu\)</span>.
 Rewritting our expression for the MSE we get
 \begin{align*}
-MSE(T) &amp;= E[{ (T-\theta) + (\theta - \mu)}^2] \
-&amp;= E[ (T-\theta)^2 + 2(T-\theta)(\theta - \mu) + (\theta - \mu)^2] \
-&amp;= E[(T-\theta)^2] + 2(\theta - \mu) \cdot 0 + b(T)^2 \
+MSE(T) &amp;= E[{ (T-\theta) + (\theta - \mu)}^2] \\
+&amp;= E[ (T-\theta)^2 + 2(T-\theta)(\theta - \mu) + (\theta - \mu)^2] \\
+&amp;= E[(T-\theta)^2] + 2(\theta - \mu) \cdot 0 + b(T)^2 \\
 &amp;= Var(T) + b(T)^2.
 \end{align*}
 This shows us that if we want to minimise the error on our estimator then this is not necessarily achieved with an unbiased estimator if it has high variance.

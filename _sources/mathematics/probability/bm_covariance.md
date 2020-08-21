@@ -15,9 +15,9 @@ The second fact is that two non-overlapping BMs are independent, i.e $B_t$ and $
 Without loss of generality, suppose $s<t$.
 Then,
 \begin{align*}
-    Cov(B_t, B_s) &= E[B_t B_s] \\
-    &= E[((B_t-B_s)+B_s)B_s] \\
-    &= E[B_s^2] + E[(B_t-B_s)B_s] \\
+    Cov(B_t, B_s) &= E[B_t B_s] \\\\\\\\
+    &= E[((B_t-B_s)+B_s)B_s] \\\\\\\\
+    &= E[B_s^2] + E[(B_t-B_s)B_s] \\\\\\\\
     &= s 
 \end{align*}
 

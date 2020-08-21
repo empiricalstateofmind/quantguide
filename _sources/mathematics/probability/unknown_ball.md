@@ -18,8 +18,8 @@ This immediately gives $\Pr(\text{Remaining=G}|\text{Picked=G}) = 2/3$.
 
 Using Bayes' Theorem, we can write
 \begin{align*}
-    \Pr(\text{Original=G}|\text{Picked=G}) &= \frac{\Pr(\text{Picked=G}|\text{Original=G}) \Pr(\text{Original=G})}{\Pr(\text{Picked=G})} \\
-    &= \frac{1 \cdot 1/2}{(1\cdot\frac{1}{2} + \frac{1}{2}\cdot\frac{1}{2})} \\
+    \Pr(\text{Original=G}|\text{Picked=G}) &= \frac{\Pr(\text{Picked=G}|\text{Original=G}) \Pr(\text{Original=G})}{\Pr(\text{Picked=G})} \\\\\\\\
+    &= \frac{1 \cdot 1/2}{(1\cdot\frac{1}{2} + \frac{1}{2}\cdot\frac{1}{2})} \\\\\\\\
     &= 2/3,
 \end{align*}
 which equally probable.

@@ -19,8 +19,8 @@ For large $n$, by the central limit theorem
 \end{align*}
 and so
 \begin{align*}
-    \Pr(\hat{p} - x < p < \hat{p} + x) &= \Pr\left( \frac{-x}{\sigma(p)/\sqrt{n}} < \frac{p-\hat{p}}{\sigma(p)/\sqrt{n}} < \frac{x}{\sigma(p)/\sqrt{n}} \right) \\
-    &\approx \Phi\left(\frac{x}{\sigma(p)/\sqrt{n}}\right) - \Phi\left(\frac{-x}{\sigma(p)/\sqrt{n}}\right) \\
+    \Pr(\hat{p} - x < p < \hat{p} + x) &= \Pr\left( \frac{-x}{\sigma(p)/\sqrt{n}} < \frac{p-\hat{p}}{\sigma(p)/\sqrt{n}} < \frac{x}{\sigma(p)/\sqrt{n}} \right) \\\\\\\\
+    &\approx \Phi\left(\frac{x}{\sigma(p)/\sqrt{n}}\right) - \Phi\left(\frac{-x}{\sigma(p)/\sqrt{n}}\right) \\\\\\\\
     &\ge \Phi(x\sqrt{4n}) - \Phi(x\sqrt{4n}).  
 \end{align*}
 The last line appears from the fact that $\sigma^2(p) = p(1-p) \le 1/4$ (as $p(1-p)$ is maximised for $p=1/2$).

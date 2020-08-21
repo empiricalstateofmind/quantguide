@@ -10,7 +10,7 @@
 What is the central limit theorem and why is it important?
 </question>
 <answer>
-Let $X_1, X_2, \dots, X_n$ be i.i.d. from \emph{any} distribution with mean $\mu$ and variance $\sigma^2 \in (0,\infty)$. Then, for all $x$,
+Let $X_1, X_2, \dots, X_n$ be i.i.d. from *any* distribution with mean $\mu$ and variance $\sigma^2 \in (0,\infty)$. Then, for all $x$,
 \begin{align*}
     \Pr\left(\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \le x \right) \to \Phi(x) \quad \text{as } n \to \infty.
 \end{align*}

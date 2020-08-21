@@ -16,11 +16,11 @@ There are two types of error when testing a hypothesis $H_0$:
 - Type II: Not rejecting $H_0$ when $H_0$ is false.
 These are also known as false positive and false negative respectively, although these are more often used in predictive tasks.
 
-The Type I error probability $\alpha$, also called the \emph{size} of a test, is given by
+The Type I error probability $\alpha$, also called the *size* of a test, is given by
 \begin{align*}
     \alpha = \Pr(\text{Reject } H_0 | H_0 \text{ True}).
 \end{align*}
-The Type II error probability $\beta$, also called the \emph{power} of the test, is given by
+The Type II error probability $\beta$, also called the *power* of the test, is given by
 \begin{align*}
     \beta = \Pr(\text{Don't Reject } H_0 | H_1 \text{ True}).
 \end{align*}

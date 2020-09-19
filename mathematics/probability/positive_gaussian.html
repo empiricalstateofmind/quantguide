@@ -313,7 +313,14 @@
 <p>Furthermore what is <span class="math notranslate nohighlight">\(P(X - 3Y &gt; 0| Y &gt; 0 )\)</span>?</p>
 <div class="toggle docutils container">
 <p><strong>Answer</strong></p>
-<p>No answer currently provided. Please feel free to <a class="reference external" href="https://github.com/empiricalstateofmind/quantguide/tree/master/source">contribute an answer</a>.</p>
+<p>The first part is simple if you know how to add and subtract two distributions.
+We can treat <span class="math notranslate nohighlight">\(X-3Y\)</span> as a new random variable <span class="math notranslate nohighlight">\(Z\)</span>.
+<span class="math notranslate nohighlight">\(Z\)</span> has distribution <span class="math notranslate nohighlight">\(N(0,10)\)</span>, since <span class="math notranslate nohighlight">\(E[X-3Y] = E[X] - 3E[Y]\)</span>, and <span class="math notranslate nohighlight">\(Var[X-3Y] = Var[X] + 9Var[Y]\)</span>.
+We then know that <span class="math notranslate nohighlight">\(P(X-3Y&gt;0)=P(Z&gt;0)=\Phi(0)=\frac{1}{2}\)</span>.</p>
+<p>The second part is more nuanced, and is best reasoned graphically.
+If we plot the <span class="math notranslate nohighlight">\((X,Y)\)</span>-plane, then all the probability we calculated in the first part is below the like <span class="math notranslate nohighlight">\(y=\frac{1}{3}x\)</span>.
+Now we have the further restriction <span class="math notranslate nohighlight">\(y&gt;0\)</span>, so we can see that the answer is given by the infinite wedge between these two lines.
+Using the angle we can see that we have <span class="math notranslate nohighlight">\(P(X - 3Y &gt; 0| Y &gt; 0 ) = \arctan(1/3)/\pi\)</span>.</p>
 </div>
 <p><strong>Interviews</strong></p>
 <p>This question has been asked at the following companies:</p>

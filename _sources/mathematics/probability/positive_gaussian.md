@@ -10,7 +10,17 @@ Furthermore what is $P(X - 3Y > 0| Y > 0 )$?
 ````{toggle} Click to reveal answer
 **Answer**
 
-No answer currently provided. Please feel free to [contribute an answer](https://github.com/empiricalstateofmind/quantguide/tree/master/source).
+
+The first part is simple if you know how to add and subtract two distributions.
+We can treat $X-3Y$ as a new random variable $Z$.
+$Z$ has distribution $N(0,10)$, since $E[X-3Y] = E[X] - 3E[Y]$, and $Var[X-3Y] = Var[X] + 9Var[Y]$.
+We then know that $P(X-3Y>0)=P(Z>0)=\Phi(0)=\frac{1}{2}$.
+
+The second part is more nuanced, and is best reasoned graphically.
+If we plot the $(X,Y)$-plane, then all the probability we calculated in the first part is below the like $y=\frac{1}{3}x$.
+Now we have the further restriction $y>0$, so we can see that the answer is given by the infinite wedge between these two lines.
+Using the angle we can see that we have $P(X - 3Y > 0| Y > 0 ) = \arctan(1/3)/\pi$.
+
 
 ````
 

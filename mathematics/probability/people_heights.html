@@ -322,16 +322,22 @@ A simpler case would be just to consider heights to be normally distributed.</p>
 <p>Let <span class="math notranslate nohighlight">\(N\)</span> be the number of people we need to measure before we find someone with a height greater than <span class="math notranslate nohighlight">\(h_1\)</span>.
 We can find the expectation by conditioning over all possible heights <span class="math notranslate nohighlight">\(h_1\)</span>, finding the probability that <span class="math notranslate nohighlight">\(h&gt;h_1\)</span>, and noting that <span class="math notranslate nohighlight">\(N\)</span> is geometrically distributed.
 This gives
-$<span class="math notranslate nohighlight">\( E[N] = \int_{h_1=0}^\infty \frac{1}{P(h &gt; h_1)} dh_1, \)</span><span class="math notranslate nohighlight">\(
-where we have used the fact that the expectation of a geometric distribution with success rate \)</span>p<span class="math notranslate nohighlight">\( is \)</span>1/p$.
+\begin{align*}
+E[N] = \int_{h_1=0}^\infty \frac{1}{P(h &gt; h_1)} dh_1,
+\end{align*}
+where we have used the fact that the expectation of a geometric distribution with success rate <span class="math notranslate nohighlight">\(p\)</span> is <span class="math notranslate nohighlight">\(1/p\)</span>.
 We can calculate this for a normal distribution, but as the question hints, we look at the uniform distribution for simplicity.</p>
 <p>In this case we get
-$<span class="math notranslate nohighlight">\( E[N] = \int_{h_1=0}^1 \frac{1}{1-h_1} dh_1. \)</span><span class="math notranslate nohighlight">\(
-Integrating we get 
-\)</span><span class="math notranslate nohighlight">\( E[N] = \left[ -\log(1-h_1) \right]_0^1. \)</span><span class="math notranslate nohighlight">\(
+\begin{align*}
+E[N] = \int_{h_1=0}^1 \frac{1}{1-h_1} dh_1.
+\end{align*}
+Integrating we get
+\begin{align*}
+E[N] = \left[ -\log(1-h_1) \right]_0^1.
+\end{align*}
 We arrive at a problem - our expectation is infinite.
 Our maths is correct, however our modelling assumption has lead to a poor conclusion.
-The issue arises since extreme values of \)</span>h_1<span class="math notranslate nohighlight">\( are likely (\)</span>h_1=0.99999<span class="math notranslate nohighlight">\( is equally likely as \)</span>h_1=0.5, for example).
+The issue arises since extreme values of <span class="math notranslate nohighlight">\(h_1\)</span> are likely (<span class="math notranslate nohighlight">\(h_1=0.99999\)</span> is equally likely as <span class="math notranslate nohighlight">\(h_1=0.5\)</span>, for example).
 However, the expected number of trials until success grows like <span class="math notranslate nohighlight">\(1/(1-h_1)\)</span> which is much faster.
 If we used a Gaussian distribution instead, the probability of extreme values decays exponentially and so we end up with a finite variance.</p>
 </div>

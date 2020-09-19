@@ -1,0 +1,19 @@
+<entry>
+<title>Positive Gaussian Probabilities</title>
+<slug>positive_gaussian</slug>
+<category>Mathematics</category>
+<subcategory>Probability</subcategory>
+<difficulty>Easy</difficulty>
+<interview>HRT (Telephone Interview)</interview>
+<date>19/09/2020</date>
+<question>
+Suppose we have two normal random varaibles, $X,Y \sim N(0,1)$, which are uncorrelated.
+
+What is $P(X - 3Y > 0)$?
+
+Furthermore what is $P(X - 3Y > 0| Y > 0 )$?
+</question>
+<answer>
+</answer>
+<include>True</include>
+</entry>

@@ -2,10 +2,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>1. Multivariate Normal Distribution &#8212; Quantitative Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Multivariate Normal Distribution &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -14,9 +15,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -24,12 +25,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -42,8 +41,8 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Chi-Squared and Student’s t Distributions" href="chi_squared_and_student.html" />
-    <link rel="prev" title="Distributions" href="index.html" />
+    <link rel="next" title="General" href="../general/index.html" />
+    <link rel="prev" title="1. Chi-Squared and Student’s t Distributions" href="chi_squared_and_student.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -121,6 +120,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_science/model_validation/index.html">
+   Model Validation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Statistics
  </span>
 </p>
@@ -135,14 +146,14 @@
    Distributions
   </a>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1. Multivariate Normal Distribution
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chi_squared_and_student.html">
-     2. Chi-Squared and Student’s t Distributions
+     1. Chi-Squared and Student’s t Distributions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. Multivariate Normal Distribution
     </a>
    </li>
   </ul>
@@ -165,13 +176,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/games/index.html">
-   Games
+  <a class="reference internal" href="../../mathematics/general/index.html">
+   General
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/general/index.html">
-   General
+  <a class="reference internal" href="../../mathematics/games/index.html">
+   Games
   </a>
  </li>
 </ul>
@@ -184,18 +195,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../finance/basics/index.html">
    Basics
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Science
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../data_science/model_validation/index.html">
-   Model Validation
   </a>
  </li>
 </ul>
@@ -293,7 +292,7 @@
               <div>
                 
   <div class="section" id="multivariate-normal-distribution">
-<h1><span class="section-number">1. </span>Multivariate Normal Distribution<a class="headerlink" href="#multivariate-normal-distribution" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Multivariate Normal Distribution<a class="headerlink" href="#multivariate-normal-distribution" title="Permalink to this headline">¶</a></h1>
 <p>What is the PDF of the multivariate normal distribution?
 Explain what each term means.</p>
 <div class="toggle docutils container">
@@ -345,8 +344,8 @@ f(\vec{x}) = \frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}\exp\left[-\frac{1}{2}(\vec{x}-
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Distributions</a>
-    <a class='right-next' id="next-link" href="chi_squared_and_student.html" title="next page"><span class="section-number">2. </span>Chi-Squared and Student’s t Distributions</a>
+    <a class='left-prev' id="prev-link" href="chi_squared_and_student.html" title="previous page"><span class="section-number">1. </span>Chi-Squared and Student’s t Distributions</a>
+    <a class='right-next' id="next-link" href="../general/index.html" title="next page">General</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

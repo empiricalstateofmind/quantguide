@@ -2,10 +2,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>1. Precision and Recall &#8212; Quantitative Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Precision and Recall &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -14,9 +15,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -24,12 +25,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -42,8 +41,8 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Type I and II Errors" href="error_types.html" />
-    <link rel="prev" title="Model Validation" href="index.html" />
+    <link rel="next" title="Methods" href="../../statistics/methods/index.html" />
+    <link rel="prev" title="1. Type I and II Errors" href="error_types.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -121,6 +120,30 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
+   Model Validation
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_types.html">
+     1. Type I and II Errors
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. Precision and Recall
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Statistics
  </span>
 </p>
@@ -153,13 +176,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/games/index.html">
-   Games
+  <a class="reference internal" href="../../mathematics/general/index.html">
+   General
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/general/index.html">
-   General
+  <a class="reference internal" href="../../mathematics/games/index.html">
+   Games
   </a>
  </li>
 </ul>
@@ -173,30 +196,6 @@
   <a class="reference internal" href="../../finance/basics/index.html">
    Basics
   </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Science
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="index.html">
-   Model Validation
-  </a>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1. Precision and Recall
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="error_types.html">
-     2. Type I and II Errors
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -293,7 +292,7 @@
               <div>
                 
   <div class="section" id="precision-and-recall">
-<h1><span class="section-number">1. </span>Precision and Recall<a class="headerlink" href="#precision-and-recall" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Precision and Recall<a class="headerlink" href="#precision-and-recall" title="Permalink to this headline">¶</a></h1>
 <p>Explain what precision and recall are.
 How do they relate to the ROC curve?</p>
 <div class="toggle docutils container">
@@ -339,8 +338,8 @@ If we have a model that we can vary continuously we can see how these rates chan
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Model Validation</a>
-    <a class='right-next' id="next-link" href="error_types.html" title="next page"><span class="section-number">2. </span>Type I and II Errors</a>
+    <a class='left-prev' id="prev-link" href="error_types.html" title="previous page"><span class="section-number">1. </span>Type I and II Errors</a>
+    <a class='right-next' id="next-link" href="../../statistics/methods/index.html" title="next page">Methods</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

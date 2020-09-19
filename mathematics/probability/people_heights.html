@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Type I and II Errors &#8212; Quantitative Guide</title>
+    <title>1. Measuring Heights of People &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -36,23 +36,23 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/data_science/model_validation/error_types.html" />
+    <link rel="canonical" href="https://andrewmellor.co.uk/quantguide/mathematics/probability/people_heights.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Precision and Recall" href="precision_and_recall.html" />
-    <link rel="prev" title="Model Validation" href="index.html" />
+    <link rel="next" title="2. Non-consecutive Tails" href="nonconsecutive_tails.html" />
+    <link rel="prev" title="Probability" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/data_science/model_validation/error_types.html" />
+<meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/probability/people_heights.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Type I and II Errors" />
-<meta property="og:description" content="Type I and II Errors  What is the difference between a Type I and Type II error? What is a confusion matrix?  Answer  There are two types of error when testing " />
+<meta property="og:title"       content="Measuring Heights of People" />
+<meta property="og:description" content="Measuring Heights of People  Suppose we are on the street, measuring the heights of individuals as they pass by. We measure the height of the first person that " />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -123,23 +123,11 @@
   Data Science
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="index.html">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_science/model_validation/index.html">
    Model Validation
   </a>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1. Type I and II Errors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="precision_and_recall.html">
-     2. Precision and Recall
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -169,19 +157,46 @@
   Mathematics
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/probability/index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
    Probability
   </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Measuring Heights of People
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonconsecutive_tails.html">
+     2. Non-consecutive Tails
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bm_covariance.html">
+     3. Covariance of Two Brownian Motions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="positive_gaussian.html">
+     4. Positive Gaussian Probabilities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="unknown_ball.html">
+     5. The Unknown Ball
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/general/index.html">
+  <a class="reference internal" href="../general/index.html">
    General
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/games/index.html">
+  <a class="reference internal" href="../games/index.html">
    Games
   </a>
  </li>
@@ -239,7 +254,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/data_science/model_validation/error_types.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/mathematics/probability/people_heights.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -259,7 +274,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fdata_science/model_validation/error_types.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/empiricalstateofmind/quantguide/issues/new?title=Issue%20on%20page%20%2Fmathematics/probability/people_heights.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -291,34 +306,39 @@
         
               <div>
                 
-  <div class="section" id="type-i-and-ii-errors">
-<h1><span class="section-number">1. </span>Type I and II Errors<a class="headerlink" href="#type-i-and-ii-errors" title="Permalink to this headline">¶</a></h1>
-<p>What is the difference between a Type I and Type II error?
-What is a confusion matrix?</p>
+  <div class="section" id="measuring-heights-of-people">
+<h1><span class="section-number">1. </span>Measuring Heights of People<a class="headerlink" href="#measuring-heights-of-people" title="Permalink to this headline">¶</a></h1>
+<p>Suppose we are on the street, measuring the heights of individuals as they pass by.
+We measure the height of the first person that we see and record it as <span class="math notranslate nohighlight">\(h_1\)</span>.
+What is the expected number of people that we need to measure subsequently until we see someone taller?
+Discuss how you would go about this and state any assumptions you make.</p>
+<p>Suppose that human heights are distributed uniformly on <span class="math notranslate nohighlight">\([0,1]\)</span>.
+What is your answer now? Does this make sense?</p>
 <div class="toggle docutils container">
 <p><strong>Answer</strong></p>
-<p>There are two types of error when testing a hypothesis <span class="math notranslate nohighlight">\(H_0\)</span>:</p>
-<ul class="simple">
-<li><p>Type I: Rejecting <span class="math notranslate nohighlight">\(H_0\)</span> when <span class="math notranslate nohighlight">\(H_0\)</span> is true</p></li>
-<li><p>Type II: Not rejecting <span class="math notranslate nohighlight">\(H_0\)</span> when <span class="math notranslate nohighlight">\(H_0\)</span> is false.
-These are also known as false positive and false negative respectively, although these are more often used in predictive tasks.</p></li>
-</ul>
-<p>The Type I error probability <span class="math notranslate nohighlight">\(\alpha\)</span>, also called the <em>size</em> of a test, is given by
-\begin{align*}
-\alpha = \Pr(\text{Reject } H_0 | H_0 \text{ True}).
-\end{align*}
-The Type II error probability <span class="math notranslate nohighlight">\(\beta\)</span>, also called the <em>power</em> of the test, is given by
-\begin{align*}
-\beta = \Pr(\text{Don’t Reject } H_0 | H_1 \text{ True}).
-\end{align*}
-These can also be defined in terms of the critical region (although not done here), the set <span class="math notranslate nohighlight">\(C\)</span> such that if <span class="math notranslate nohighlight">\(\vec{x} \in C\)</span> then we reject <span class="math notranslate nohighlight">\(H_0\)</span>.</p>
-<p>A confusion matrix is a more general version of the Type I and Type II errors, where there are multiple possible hypotheses or classifications.
-For example, if we have <span class="math notranslate nohighlight">\(k\)</span> different potential classifications, then the (asymmetric) confusion matrix entry <span class="math notranslate nohighlight">\(C_{ij}\)</span> gives the number or fraction of data points which are of class <span class="math notranslate nohighlight">\(i\)</span> but incorrectly classified as class <span class="math notranslate nohighlight">\(j\)</span>.
-When <span class="math notranslate nohighlight">\(k=2\)</span> there are two off-diagonal terms - these are the Type I and Type II errors.</p>
+<p>This is a nice question since it tests not only basic probability, but also how one might approach a modelling question.
+If we were to model the problem properly, we might want to consider a bimodal distribution (say a composition of two normals) to reflect the differences between men and women’s heights.
+A simpler case would be just to consider heights to be normally distributed.</p>
+<p>Let <span class="math notranslate nohighlight">\(N\)</span> be the number of people we need to measure before we find someone with a height greater than <span class="math notranslate nohighlight">\(h_1\)</span>.
+We can find the expectation by conditioning over all possible heights <span class="math notranslate nohighlight">\(h_1\)</span>, finding the probability that <span class="math notranslate nohighlight">\(h&gt;h_1\)</span>, and noting that <span class="math notranslate nohighlight">\(N\)</span> is geometrically distributed.
+This gives
+$<span class="math notranslate nohighlight">\( E[N] = \int_{h_1=0}^\infty \frac{1}{P(h &gt; h_1)} dh_1, \)</span><span class="math notranslate nohighlight">\(
+where we have used the fact that the expectation of a geometric distribution with success rate \)</span>p<span class="math notranslate nohighlight">\( is \)</span>1/p$.
+We can calculate this for a normal distribution, but as the question hints, we look at the uniform distribution for simplicity.</p>
+<p>In this case we get
+$<span class="math notranslate nohighlight">\( E[N] = \int_{h_1=0}^1 \frac{1}{1-h_1} dh_1. \)</span><span class="math notranslate nohighlight">\(
+Integrating we get 
+\)</span><span class="math notranslate nohighlight">\( E[N] = \left[ -\log(1-h_1) \right]_0^1. \)</span><span class="math notranslate nohighlight">\(
+We arrive at a problem - our expectation is infinite.
+Our maths is correct, however our modelling assumption has lead to a poor conclusion.
+The issue arises since extreme values of \)</span>h_1<span class="math notranslate nohighlight">\( are likely (\)</span>h_1=0.99999<span class="math notranslate nohighlight">\( is equally likely as \)</span>h_1=0.5, for example).
+However, the expected number of trials until success grows like <span class="math notranslate nohighlight">\(1/(1-h_1)\)</span> which is much faster.
+If we used a Gaussian distribution instead, the probability of extreme values decays exponentially and so we end up with a finite variance.</p>
 </div>
-<p><strong>Links and Further Reading</strong></p>
+<p><strong>Interviews</strong></p>
+<p>This question has been asked at the following companies:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Type_I_and_type_II_errors">Wikipedia</a></p></li>
+<li><p>HRT (Telephone Interview)</p></li>
 </ul>
 </div>
 
@@ -335,7 +355,7 @@ When <span class="math notranslate nohighlight">\(k=2\)</span> there are two off
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data_science/model_validation"
+            path: "./mathematics/probability"
         },
         predefinedOutput: true
     }
@@ -350,8 +370,8 @@ When <span class="math notranslate nohighlight">\(k=2\)</span> there are two off
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Model Validation</a>
-    <a class='right-next' id="next-link" href="precision_and_recall.html" title="next page"><span class="section-number">2. </span>Precision and Recall</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Probability</a>
+    <a class='right-next' id="next-link" href="nonconsecutive_tails.html" title="next page"><span class="section-number">2. </span>Non-consecutive Tails</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Probability &#8212; Quantitative Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -14,9 +15,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -24,12 +25,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -42,7 +41,7 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. The Unknown Ball" href="unknown_ball.html" />
+    <link rel="next" title="1. Measuring Heights of People" href="people_heights.html" />
     <link rel="prev" title="1. The Central Limit Theorem" href="../../statistics/general/central_limit_theorem.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +52,7 @@
 <meta property="og:url"         content="https://andrewmellor.co.uk/quantguide/mathematics/probability/index.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Probability" />
-<meta property="og:description" content="Probability  The Unknown Ball  Covariance of Two Brownian Motions  Non-consecutive Tails  " />
+<meta property="og:description" content="Probability  Measuring Heights of People  Non-consecutive Tails  Covariance of Two Brownian Motions  Positive Gaussian Probabilities  The Unknown Ball  " />
 <meta property="og:image"       content="https://andrewmellor.co.uk/quantguide/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -121,6 +120,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_science/model_validation/index.html">
+   Model Validation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Statistics
  </span>
 </p>
@@ -153,30 +164,40 @@
   </a>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="unknown_ball.html">
-     1. The Unknown Ball
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bm_covariance.html">
-     2. Covariance of Two Brownian Motions
+    <a class="reference internal" href="people_heights.html">
+     1. Measuring Heights of People
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="nonconsecutive_tails.html">
-     3. Non-consecutive Tails
+     2. Non-consecutive Tails
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bm_covariance.html">
+     3. Covariance of Two Brownian Motions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="positive_gaussian.html">
+     4. Positive Gaussian Probabilities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="unknown_ball.html">
+     5. The Unknown Ball
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../games/index.html">
-   Games
+  <a class="reference internal" href="../general/index.html">
+   General
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../general/index.html">
-   General
+  <a class="reference internal" href="../games/index.html">
+   Games
   </a>
  </li>
 </ul>
@@ -189,18 +210,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../finance/basics/index.html">
    Basics
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Science
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../data_science/model_validation/index.html">
-   Model Validation
   </a>
  </li>
 </ul>
@@ -301,9 +310,11 @@
 <h1>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
 <div class="tableofcontents-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="unknown_ball.html">1. The Unknown Ball</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bm_covariance.html">2. Covariance of Two Brownian Motions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonconsecutive_tails.html">3. Non-consecutive Tails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_heights.html">1. Measuring Heights of People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonconsecutive_tails.html">2. Non-consecutive Tails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bm_covariance.html">3. Covariance of Two Brownian Motions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="positive_gaussian.html">4. Positive Gaussian Probabilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unknown_ball.html">5. The Unknown Ball</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -339,7 +350,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../../statistics/general/central_limit_theorem.html" title="previous page"><span class="section-number">1. </span>The Central Limit Theorem</a>
-    <a class='right-next' id="next-link" href="unknown_ball.html" title="next page"><span class="section-number">1. </span>The Unknown Ball</a>
+    <a class='right-next' id="next-link" href="people_heights.html" title="next page"><span class="section-number">1. </span>Measuring Heights of People</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,7 +1,7 @@
 # Positive Gaussian Probabilities
 
 
-Suppose we have two normal random varaibles, $X,Y \sim N(0,1)$, which are uncorrelated.
+Suppose we have two normal random variables, $X,Y \sim N(0,1)$, which are uncorrelated.
 
 What is $P(X - 3Y > 0)$?
 

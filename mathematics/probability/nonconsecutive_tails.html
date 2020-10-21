@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,16 +6,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. Non-consecutive Tails &#8212; Quantitative Guide</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -25,9 +44,9 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -41,11 +60,11 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Covariance of Two Brownian Motions" href="bm_covariance.html" />
-    <link rel="prev" title="1. Measuring Heights of People" href="people_heights.html" />
+    <link rel="next" title="3. Measuring Heights of People" href="people_heights.html" />
+    <link rel="prev" title="1. Covariance of Two Brownian Motions" href="bm_covariance.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
@@ -120,6 +139,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Finance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../finance/basics/index.html">
+   Basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Data Science
  </span>
 </p>
@@ -132,40 +163,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Statistics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/methods/index.html">
-   Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/distributions/index.html">
-   Distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../statistics/general/index.html">
-   General
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Mathematics
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../games/index.html">
+   Games
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../general/index.html">
+   General
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="index.html">
    Probability
   </a>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="people_heights.html">
-     1. Measuring Heights of People
+    <a class="reference internal" href="bm_covariance.html">
+     1. Covariance of Two Brownian Motions
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -174,42 +193,42 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="bm_covariance.html">
-     3. Covariance of Two Brownian Motions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="positive_gaussian.html">
-     4. Positive Gaussian Probabilities
+    <a class="reference internal" href="people_heights.html">
+     3. Measuring Heights of People
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="unknown_ball.html">
-     5. The Unknown Ball
+     4. The Unknown Ball
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="positive_gaussian.html">
+     5. Positive Gaussian Probabilities
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../general/index.html">
-   General
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../games/index.html">
-   Games
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Finance
+  Statistics
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../finance/basics/index.html">
-   Basics
+  <a class="reference internal" href="../../statistics/general/index.html">
+   General
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../statistics/methods/index.html">
+   Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../statistics/distributions/index.html">
+   Distributions
   </a>
  </li>
 </ul>
@@ -296,7 +315,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -305,12 +325,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -330,16 +345,18 @@ Let <span class="math notranslate nohighlight">\(f(n)\)</span> be the number of 
 The base cases are <span class="math notranslate nohighlight">\(f(1) = 1\)</span> and <span class="math notranslate nohighlight">\(f(2)=3\)</span>, which can be seen easily by inspection.
 Suppose we have a sequence of length <span class="math notranslate nohighlight">\(n\)</span>.
 This was made either by adding a <span class="math notranslate nohighlight">\(H\)</span> to a sequence of length <span class="math notranslate nohighlight">\(n-1\)</span>, or by adding <span class="math notranslate nohighlight">\(HT\)</span> to a sequence of length <span class="math notranslate nohighlight">\(n-2\)</span>.
-We therefore have the recurrence relationship
-\begin{align*}
-f(n) = f(n-1) + f(n-1).
-\end{align*}
-For those familiar with it, this is the <em>Fibonacci sequence</em>, <span class="math notranslate nohighlight">\(F(n)\)</span>, shifted by two terms.
+We therefore have the recurrence relationship</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    f(n) = f(n-1) + f(n-1).
+\end{align*}\]</div>
+<p>For those familiar with it, this is the <em>Fibonacci sequence</em>, <span class="math notranslate nohighlight">\(F(n)\)</span>, shifted by two terms.
 This has closed form solution <span class="math notranslate nohighlight">\(F(n) = (\phi_+^n - \phi_-^n)/\sqrt{5}\)</span>, where <span class="math notranslate nohighlight">\(\phi_\pm = (1 \pm \sqrt{5})/2\)</span>.</p>
-<p>The probability that no two consecutive tails appear in a sequence of <span class="math notranslate nohighlight">\(n\)</span> coin tosses is therefore
-\begin{align*}
-F(n+2)/2^n = (\phi_+^{n+2} - \phi_-^{n+2})/(\sqrt{5} \cdot 2^n).
-\end{align*}</p>
+<p>The probability that no two consecutive tails appear in a sequence of <span class="math notranslate nohighlight">\(n\)</span> coin tosses is therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    F(n+2)/2^n = (\phi_+^{n+2} - \phi_-^{n+2})/(\sqrt{5} \cdot 2^n).
+\end{align*}\]</div>
 </div>
 <p><strong>Interviews</strong></p>
 <p>This question has been asked at the following companies:</p>
@@ -376,8 +393,8 @@ F(n+2)/2^n = (\phi_+^{n+2} - \phi_-^{n+2})/(\sqrt{5} \cdot 2^n).
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="people_heights.html" title="previous page"><span class="section-number">1. </span>Measuring Heights of People</a>
-    <a class='right-next' id="next-link" href="bm_covariance.html" title="next page"><span class="section-number">3. </span>Covariance of Two Brownian Motions</a>
+    <a class='left-prev' id="prev-link" href="bm_covariance.html" title="previous page"><span class="section-number">1. </span>Covariance of Two Brownian Motions</a>
+    <a class='right-next' id="next-link" href="people_heights.html" title="next page"><span class="section-number">3. </span>Measuring Heights of People</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -396,7 +413,10 @@ F(n+2)/2^n = (\phi_+^{n+2} - \phi_-^{n+2})/(\sqrt{5} \cdot 2^n).
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>

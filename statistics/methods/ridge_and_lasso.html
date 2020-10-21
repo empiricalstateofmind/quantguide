@@ -1,22 +1,41 @@
 
-
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Ridge and Lasso Regression &#8212; Quantitative Guide</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <title>1. Ridge and Lasso Regression &#8212; Quantitative Guide</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -25,9 +44,9 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -41,11 +60,11 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Bias-Variance Tradeoff" href="variance_bias_tradeoff.html" />
-    <link rel="prev" title="1. Hypothesis Testing" href="hypothesis_testing.html" />
+    <link rel="next" title="2. Required Sample Size" href="sample_sizes.html" />
+    <link rel="prev" title="Methods" href="index.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
@@ -120,6 +139,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Finance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../finance/basics/index.html">
+   Basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Data Science
  </span>
 </p>
@@ -132,57 +163,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Statistics
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="index.html">
-   Methods
-  </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="hypothesis_testing.html">
-     1. Hypothesis Testing
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2. Ridge and Lasso Regression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="variance_bias_tradeoff.html">
-     3. Bias-Variance Tradeoff
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sample_sizes.html">
-     4. Required Sample Size
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../distributions/index.html">
-   Distributions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../general/index.html">
-   General
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Mathematics
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/probability/index.html">
-   Probability
+  <a class="reference internal" href="../../mathematics/games/index.html">
+   Games
   </a>
  </li>
  <li class="toctree-l1">
@@ -191,20 +178,52 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../mathematics/games/index.html">
-   Games
+  <a class="reference internal" href="../../mathematics/probability/index.html">
+   Probability
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Finance
+  Statistics
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../finance/basics/index.html">
-   Basics
+  <a class="reference internal" href="../general/index.html">
+   General
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="index.html">
+   Methods
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Ridge and Lasso Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sample_sizes.html">
+     2. Required Sample Size
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hypothesis_testing.html">
+     3. Hypothesis Testing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variance_bias_tradeoff.html">
+     4. Bias-Variance Tradeoff
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../distributions/index.html">
+   Distributions
   </a>
  </li>
 </ul>
@@ -291,7 +310,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -300,12 +320,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -314,22 +329,24 @@
               <div>
                 
   <div class="section" id="ridge-and-lasso-regression">
-<h1><span class="section-number">2. </span>Ridge and Lasso Regression<a class="headerlink" href="#ridge-and-lasso-regression" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Ridge and Lasso Regression<a class="headerlink" href="#ridge-and-lasso-regression" title="Permalink to this headline">¶</a></h1>
 <p>What is the difference between lasso and ridge regression, i.e. the difference between the L1- and L2-norm?
 Why does the L1-norm specifically produce zero (or extremely small coefficients)?</p>
 <div class="toggle docutils container">
 <p><strong>Answer</strong></p>
 <p>The lasso regression uses the L1-norm as a coefficient penalty, whereas ridge regression uses the L2-norm as a coefficient penalty.
-Specifically the loss functions are:
-\begin{align*}
-L_{\rm Ridge} &amp;= (y - X \beta)^T(y - X \beta) - \beta^T\beta, \\
-L_{\rm Lasso} &amp;= (y - X \beta)^T(y - X \beta) - |\beta|.
-\end{align*}
-Alternatively we can write these elementwise as
-\begin{align*}
-L_{\rm Ridge} &amp;= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i \beta_i^2, \\
-L_{\rm Lasso} &amp;= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i |\beta_i|.
-\end{align*}</p>
+Specifically the loss functions are:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    L_{\rm Ridge} &amp;= (y - X \beta)^T(y - X \beta) - \beta^T\beta, \\\\\\\\
+    L_{\rm Lasso} &amp;= (y - X \beta)^T(y - X \beta) - |\beta|.
+\end{align*}\]</div>
+<p>Alternatively we can write these elementwise as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    L_{\rm Ridge} &amp;= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i \beta_i^2, \\\\\\\\
+    L_{\rm Lasso} &amp;= \sum_{i}(y_i - \sum_j X_{ij} \beta_i)^2 - \lambda \sum_i |\beta_i|.
+\end{align*}\]</div>
 <p>The second question aims to test whether you know the consequences of these penalties.
 There is a geometric explanation, and an algebraic one, with the geometric explanation perhaps easier to understand.
 The region formed by the region <span class="math notranslate nohighlight">\(|\beta| &lt; t\)</span>, introduces corners to the constraint, whereas <span class="math notranslate nohighlight">\(\beta^T\beta &lt; t\)</span> is smooth.
@@ -369,8 +386,8 @@ This is not the case when we use the quadratic penalty of ridge regression.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="hypothesis_testing.html" title="previous page"><span class="section-number">1. </span>Hypothesis Testing</a>
-    <a class='right-next' id="next-link" href="variance_bias_tradeoff.html" title="next page"><span class="section-number">3. </span>Bias-Variance Tradeoff</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Methods</a>
+    <a class='right-next' id="next-link" href="sample_sizes.html" title="next page"><span class="section-number">2. </span>Required Sample Size</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -389,7 +406,10 @@ This is not the case when we use the quadratic penalty of ridge regression.</p>
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>
